@@ -19,10 +19,7 @@ export const metadata: Metadata = {
   },
   description: "Dokumentasi lengkap platform TeamVora — manajemen tim all-in-one.",
   icons: {
-    icon: [
-      { url: "/icon.png", type: "image/png" },
-    ],
-    apple: "/icon.png",
+    icon: "/icon.png",
   },
 };
 
@@ -34,9 +31,7 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning className="h-full antialiased">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/icon.png" />
+        <link rel="icon" href="/icon.png" sizes="any" />
       </head>
       <body className={`${geist.variable} ${geistMono.variable} font-sans`}>
         {children}
