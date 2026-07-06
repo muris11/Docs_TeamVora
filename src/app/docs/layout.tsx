@@ -1,4 +1,4 @@
-import { Sidebar } from "@/components/docs/sidebar";
+import { Sidebar, Navbar } from "@/components/docs/sidebar";
 
 export const metadata = {
   title: "Dokumentasi - TeamVora",
@@ -13,11 +13,17 @@ export default function DocsLayout({
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <main className="flex-1 overflow-x-hidden px-8 py-6 lg:px-12">
-        <article className="prose prose-gray dark:prose-invert max-w-none">
-          {children}
-        </article>
-      </main>
+      <div className="flex flex-1 flex-col min-w-0">
+        <Navbar />
+        <main className="flex-1 px-6 py-8 lg:px-12 lg:py-10">
+          <article className="mx-auto max-w-4xl">
+            {children}
+          </article>
+        </main>
+        <footer className="border-t px-6 py-6 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} TeamVora. All rights reserved.</p>
+        </footer>
+      </div>
     </div>
   );
 }

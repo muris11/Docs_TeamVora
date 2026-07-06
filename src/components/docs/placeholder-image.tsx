@@ -12,24 +12,24 @@ interface PlaceholderImageProps {
 export function PlaceholderImage({
   alt = "Gambar",
   width = "100%",
-  height = 200,
+  height = 220,
   className,
   caption,
 }: PlaceholderImageProps) {
   return (
-    <figure className={cn("my-6", className)}>
+    <figure className={cn("my-8", className)}>
       <div
-        className="flex flex-col items-center justify-center rounded-lg border border-dashed border-muted-foreground/25 bg-muted/50 text-muted-foreground"
+        className="flex flex-col items-center justify-center rounded-xl border border-dashed border-muted-foreground/20 bg-muted/30 text-muted-foreground transition-colors hover:bg-muted/50"
         style={{
           width: typeof width === "number" ? `${width}px` : width,
           height: typeof height === "number" ? `${height}px` : height,
         }}
       >
-        <ImageIcon className="mb-2 h-8 w-8 opacity-50" />
-        <span className="text-xs">{alt}</span>
+        <ImageIcon className="mb-3 h-10 w-10 opacity-30" />
+        <span className="text-sm font-medium opacity-50">{alt}</span>
       </div>
       {caption && (
-        <figcaption className="mt-2 text-center text-xs text-muted-foreground">
+        <figcaption className="mt-3 text-center text-xs text-muted-foreground">
           {caption}
         </figcaption>
       )}

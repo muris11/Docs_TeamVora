@@ -163,3 +163,61 @@
 @utility animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
 }
+
+/* Docs content styling */
+@layer base {
+  article h1 {
+    @apply mt-0 mb-4 text-3xl font-bold tracking-tight;
+  }
+  article h2 {
+    @apply mt-10 mb-4 text-2xl font-semibold tracking-tight border-b pb-3;
+  }
+  article h3 {
+    @apply mt-8 mb-3 text-xl font-semibold;
+  }
+  article h4 {
+    @apply mt-6 mb-2 text-base font-semibold;
+  }
+  article p {
+    @apply mb-4 leading-7 text-muted-foreground;
+  }
+  article ul {
+    @apply mb-4 ml-6 list-disc space-y-1.5 text-muted-foreground;
+  }
+  article ol {
+    @apply mb-4 ml-6 list-decimal space-y-1.5 text-muted-foreground;
+  }
+  article li {
+    @apply leading-7;
+  }
+  article strong {
+    @apply font-semibold text-foreground;
+  }
+  article code {
+    @apply rounded bg-muted px-1.5 py-0.5 text-sm font-mono;
+  }
+  article pre {
+    @apply mb-4 overflow-x-auto rounded-xl bg-muted p-4 text-sm;
+  }
+  article blockquote {
+    @apply my-6 border-l-4 border-primary/30 pl-4 italic text-muted-foreground;
+  }
+  article hr {
+    @apply my-8 border-border;
+  }
+  article a {
+    @apply font-medium text-primary underline underline-offset-4 hover:text-primary/80;
+  }
+  article table {
+    @apply mb-4 w-full text-sm;
+  }
+  article thead {
+    @apply border-b;
+  }
+  article th {
+    @apply px-4 py-2.5 text-left font-medium;
+  }
+  article td {
+    @apply border-b px-4 py-2.5;
+  }
+}
