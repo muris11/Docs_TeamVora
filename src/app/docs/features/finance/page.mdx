@@ -1,0 +1,336 @@
+---
+title: "Fitur Finance"
+description: "Panduan lengkap fitur keuangan TeamVora: Kas, Tagihan Split Bills, dan Tagihan Berulang untuk mengelola keuangan tim."
+---
+
+import { Callout } from "@/components/docs/callout"
+import { Steps, Step } from "@/components/docs/steps"
+import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
+# Fitur Finance
+
+Panduan lengkap mengelola keuangan tim menggunakan fitur Finance di TeamVora. Fitur ini terdiri dari tiga modul utama: **Kas (Cash Book)** untuk pencatatan transaksi, **Tagihan (Split Bills)** untuk pembagian biaya antar anggota, dan **Tagihan Berulang (Recurring Bills)** untuk pengeluaran rutin.
+
+<Callout variant="info" title="Tentang Fitur Finance">
+Fitur Finance membantu tim mengelola keuangan secara transparan. Setiap transaksi tercatat otomatis, dan anggota bisa melihat ringkasan saldo kapan saja. Fitur ini mendukung mata uang Rupiah (IDR).
+</Callout>
+
+---
+
+## Kas (Cash Book)
+
+### Apa itu Kas
+
+Cash Book adalah fitur pencatatan keuangan tim yang memungkinkan Anda mencatat setiap transaksi masuk (in) dan keluar (out). Setiap transaksi bisa dilampiri bukti pembayaran untuk dokumentasi dan audit di masa depan. Semua anggota tim dapat membuat catatan kas, namun hanya pemilik catatan yang dapat mengedit atau menghapusnya.
+
+Fitur Kas menyediakan ringkasan otomatis yang mencakup total pemasukan, total pengeluaran, dan saldo akhir. Dengan demikian, Anda selalu mengetahui kondisi keuangan tim secara real-time tanpa perlu menghitung manual.
+
+<PlaceholderImage alt="Halaman Kas" caption="Tampilan halaman Kas dengan daftar transaksi dan ringkasan saldo" />
+
+---
+
+### Membuat Transaksi Baru
+
+<Steps>
+  <Step number={1} title="Buka Menu Kas">
+    Navigasi ke menu **Finance → Kas** dari sidebar atau navigasi utama. Halaman Kas akan menampilkan daftar transaksi yang sudah ada beserta ringkasan saldo di bagian atas.
+  </Step>
+  <Step number={2} title="Klik Tambah Transaksi">
+    Tekan tombol **Tambah Transaksi** yang terletak di pojok kanan atas halaman Kas. Formulir pembuatan transaksi baru akan terbuka.
+  </Step>
+  <Step number={3} title="Pilih Jenis Transaksi">
+    Tentukan apakah transaksi ini merupakan uang masuk atau keluar:
+    - **Masuk (In)** — untuk mencatat uang yang diterima tim, seperti donasi, pembayaran dari klien, atau reimbursement
+    - **Keluar (Out)** — untuk mencatat uang yang dikeluarkan tim, seperti pembelian barang, biaya operasional, atau transportasi
+  </Step>
+  <Step number={4} title="Isi Judul Transaksi">
+    Beri nama judul yang jelas dan deskriptif untuk transaksi ini. Contoh: "Pembelian ATK Kantor", "Donasi dari PT Maju", "Biaya Transportasi Acara". Judul yang jelas memudahkan pencarian di kemudian hari.
+  </Step>
+  <Step number={5} title="Isi Jumlah Nominal">
+    Masukkan jumlah nominal transaksi dalam Rupiah (IDR). Pastikan angka yang dimasukkan sudah benar karena nominal akan mempengaruhi perhitungan saldo secara otomatis.
+  </Step>
+  <Step number={6} title="Pilih Tanggal Transaksi">
+    Tentukan tanggal kapan transaksi ini terjadi. Tanggal bisa berbeda dari tanggal saat Anda membuat catatan, misalnya untuk mencatat transaksi yang sudah terjadi beberapa hari lalu.
+  </Step>
+  <Step number={7} title="Tambahkan Keterangan (Opsional)">
+    Isi keterangan tambahan untuk menjelaskan detail transaksi. Keterangan ini bersifat opsional tetapi sangat direkomendasikan untuk memudahkan audit dan pencarian di kemudian hari.
+  </Step>
+  <Step number={8} title="Unggah Lampiran Bukti (Opsional)">
+    Lampirkan bukti pembayaran seperti struk, screenshot transfer, atau dokumen pendukung lainnya. Format yang didukung meliputi gambar (JPG, PNG) dan PDF. Lampiran ini berguna sebagai bukti transaksi untuk audit.
+  </Step>
+  <Step number={9} title="Simpan Transaksi">
+    Klik tombol **Simpan** untuk menyimpan transaksi. Transaksi baru akan langsung muncul di daftar transaksi dan ringkasan saldo akan diperbarui secara otomatis.
+  </Step>
+</Steps>
+
+---
+
+### Melihat Riwayat Transaksi
+
+Halaman Kas menampilkan ringkasan keuangan secara otomatis di bagian atas halaman:
+
+| Komponen | Keterangan |
+|----------|-----------|
+| **Total Masuk** | Jumlah seluruh transaksi masuk yang sudah dicatat |
+| **Total Keluar** | Jumlah seluruh transaksi keluar yang sudah dicatat |
+| **Saldo** | Selisih antara total masuk dan total keluar |
+
+<Callout variant="info" title="Ringkasan Saldo">
+Ringkasan saldo diperbarui secara otomatis setiap kali ada transaksi baru, edit, atau hapus. Anda tidak perlu menghitung manual.
+</Callout>
+
+**Filter dan Pencarian:**
+
+- **Filter Jenis** — tampilkan hanya transaksi masuk atau keluar saja
+- **Filter Tanggal** — pilih rentang tanggal untuk melihat transaksi periode tertentu
+- **Pencarian** — ketik kata kunci pada kolom pencarian untuk mencari transaksi berdasarkan judul atau keterangan
+
+---
+
+### Mengedit dan Menghapus Transaksi
+
+Anda hanya bisa mengedit atau menghapus transaksi yang Anda buat sendiri. Berikut langkah-langkahnya:
+
+<Steps>
+  <Step number={1} title="Buka Detail Transaksi">
+    Klik pada transaksi yang ingin diubah dari daftar transaksi. Detail transaksi akan terbuka.
+  </Step>
+  <Step number={2} title="Edit atau Hapus">
+    - Untuk **mengedit**: ubah field yang diperlukan (judul, nominal, tanggal, dll), lalu klik **Simpan Perubahan**
+    - Untuk **menghapus**: klik tombol **Hapus**, lalu konfirmasi penghapusan
+  </Step>
+</Steps>
+
+<Callout variant="warning" title="Perhatikan">
+Perubahan pada transaksi akan mempengaruhi ringkasan saldo secara otomatis. Pastikan data sudah benar sebelum menyimpan perubahan.
+</Callout>
+
+---
+
+### Tips Keuangan untuk Kas
+
+<Callout variant="tip" title="Tips Keuangan">
+
+- **Selalu unggah bukti pembayaran** untuk setiap transaksi sebagai dokumentasi
+- **Gunakan keterangan yang jelas** untuk memudahkan pencarian dan audit
+- **Periksa ringkasan saldo secara berkala** untuk memastikan catatan sudah akurat
+- **Catat transaksi sesegera mungkin** setelah transaksi terjadi agar tidak terlupakan
+- **Gunakan filter tanggal** untuk melihat laporan keuangan periode tertentu
+
+</Callout>
+
+---
+
+## Tagihan (Split Bills)
+
+### Apa itu Tagihan
+
+Tagihan adalah fitur untuk membagi tagihan bersama antar anggota tim. Pembuat tagihan bisa menentukan siapa yang harus membayar dan berapa jumlahnya. Setiap anggota yang ditagih akan menerima notifikasi dan wajib mengunggah bukti pembayaran untuk diverifikasi oleh Team Leader.
+
+Fitur ini sangat berguna untuk pembagian biaya seperti makan bersama, biaya acara, langganan bersama, atau pengeluaran tim lainnya yang perlu dibagi secara merata atau sesuai porsi masing-masing.
+
+<PlaceholderImage alt="Tagihan Split" caption="Tampilan papan Tagihan dengan kolom status pembayaran" />
+
+---
+
+### Status Tagihan
+
+Setiap item tagihan memiliki status yang menunjukkan progres pembayaran:
+
+| Status | Keterangan | Warna |
+|--------|-----------|-------|
+| **Unpaid** | Anggota belum melakukan pembayaran sama sekali | Merah |
+| **Pending Verification** | Bukti pembayaran sudah diunggah, menunggu verifikasi dari Team Leader | Kuning |
+| **Paid** | Pembayaran sudah diverifikasi dan dinyatakan lunas | Hijau |
+
+---
+
+### Membuat Tagihan
+
+<Steps>
+  <Step number={1} title="Buka Menu Tagihan">
+    Navigasi ke **Finance → Tagihan**. Halaman Tagihan akan menampilkan daftar tagihan yang sudah ada beserta status pembayarannya.
+  </Step>
+  <Step number={2} title="Klik Buat Tagihan Baru">
+    Tekan tombol **Buat Tagihan Baru** atau **Tambah Tagihan**. Formulir pembuatan tagihan akan terbuka.
+  </Step>
+  <Step number={3} title="Isi Informasi Tagihan">
+    Lengkapi informasi dasar tagihan:
+    - **Judul** — nama tagihan (contoh: "Makan Bareng November", "Listrik Bulanan Kantor", "Acara Year-End")
+    - **Total Jumlah** — jumlah total tagihan yang harus dibagi
+    - **Tanggal Jatuh Tempo** — batas waktu pembayaran oleh anggota yang ditagih
+  </Step>
+  <Step number={4} title="Tambahkan Item Tagihan">
+    Untuk setiap anggota yang harus membayar:
+    - Pilih **anggota** dari daftar anggota tim
+    - Isi **jumlah** yang harus dibayar oleh anggota tersebut
+    - Ulangi langkah ini untuk setiap anggota yang ditagih
+  </Step>
+  <Step number={5} title="Simpan Tagihan">
+    Klik **Simpan** untuk membuat tagihan. Anggota yang ditagih akan menerima notifikasi bahwa ada tagihan baru yang harus dibayar.
+  </Step>
+</Steps>
+
+<Callout variant="warning" title="Perhatikan">
+Setelah tagihan dibuat, item dan anggota yang sudah ditagih tidak dapat diubah. Pastikan data sudah benar sebelum menyimpan. Jika ada kesalahan, Anda perlu menghapus tagihan dan membuat yang baru.
+</Callout>
+
+---
+
+### Alur Pembayaran
+
+Berikut adalah alur pembayaran dari awal hingga selesai:
+
+1. **Pembuat Tagihan membuat tagihan** — menentukan judul, total, jatuh tempo, dan anggota yang ditagih
+2. **Anggota menerima notifikasi** — anggota yang ditagih mendapat notifikasi bahwa ada tagihan baru
+3. **Anggota mengunggah bukti pembayaran** — anggota membayar dan mengunggah bukti transfer/struk
+4. **Team Leader memverifikasi** — Team Leader memeriksa bukti pembayaran dan menyetujui
+5. **Status berubah menjadi Paid** — setelah diverifikasi, status berubah dari "Pending Verification" menjadi "Lunas"
+
+---
+
+### Membayar Tagihan yang Ditugaskan
+
+<Steps>
+  <Step number={1} title="Buka Detail Tagihan">
+    Buka detail tagihan yang ditugaskan kepada Anda. Anda akan melihat item tagihan beserta jumlah yang harus dibayar.
+  </Step>
+  <Step number={2} title="Klik Bayar">
+    Klik tombol **Bayar** pada item tagihan Anda. Formulir pembayaran akan terbuka.
+  </Step>
+  <Step number={3} title="Unggah Bukti Pembayaran">
+    Lampirkan bukti pembayaran berupa gambar (struk, screenshot transfer). Pastikan bukti terlihat jelas dan lengkap.
+  </Step>
+  <Step number={4} title="Kirim Bukti">
+    Klik **Kirim** untuk mengunggah bukti pembayaran. Status item akan berubah dari "Unpaid" menjadi "Pending Verification".
+  </Step>
+</Steps>
+
+---
+
+### Memverifikasi Pembayaran
+
+Hanya **Team Leader** yang dapat memverifikasi pembayaran tagihan:
+
+<Steps>
+  <Step number={1} title="Lihat Tagihan yang Menunggu Verifikasi">
+    Buka halaman Tagihan dan cari item dengan status **Pending Verification**. Item ini menunjukkan anggota yang sudah mengunggah bukti pembayaran.
+  </Step>
+  <Step number={2} title="Periksa Bukti Pembayaran">
+    Klik pada item untuk melihat bukti pembayaran yang diunggah. Pastikan bukti sesuai dengan jumlah yang harus dibayar.
+  </Step>
+  <Step number={3} title="Verifikasi atau Tolak">
+    - Jika bukti valid: klik **Verifikasi** → status berubah menjadi **Paid**
+    - Jika bukti tidak sesuai: kembalikan ke status **Unpaid** dan minta anggota mengunggah ulang
+  </Step>
+</Steps>
+
+<PlaceholderImage alt="Halaman Verifikasi Tagihan" caption="Tampilan verifikasi pembayaran dengan bukti lampiran" />
+
+---
+
+## Tagihan Berulang (Recurring Bills)
+
+### Apa itu Tagihan Berulang
+
+Tagihan Berulang adalah fitur untuk membuat tagihan secara otomatis sesuai jadwal yang ditentukan. Cocok untuk pengeluaran rutin yang memiliki jadwal tetap, seperti sewa tempat, biaya listrik, langganan internet, atau gaji karyawan.
+
+Sistem akan secara otomatis membuat tagihan baru sesuai frekuensi yang Anda atur, sehingga Anda tidak perlu membuat tagihan secara manual setiap periode. Tagihan yang dihasilkan akan langsung muncul di halaman **Tagihan** sebagai tagihan biasa.
+
+<PlaceholderImage alt="Tagihan Berulang" caption="Form pembuatan Tagihan Berulang dengan opsi frekuensi dan anggota" />
+
+---
+
+### Membuat Tagihan Berulang
+
+<Steps>
+  <Step number={1} title="Buka Menu Tagihan Berulang">
+    Navigasi ke **Finance → Tagihan Berulang**. Halaman ini menampilkan semua tagihan berulang yang sudah dibuat beserta status aktifnya.
+  </Step>
+  <Step number={2} title="Klik Buat Tagihan Berulang">
+    Tekan tombol **Buat Tagihan Berulang** atau **Tambah Tagihan Berulang**. Formulir pembuatan akan terbuka.
+  </Step>
+  <Step number={3} title="Isi Detail Tagihan">
+    Lengkapi semua informasi tagihan berulang:
+    - **Judul** — nama tagihan berulang (contoh: "Sewa Kantor Bulanan", "Listrik PLN")
+    - **Deskripsi** — keterangan tambahan tentang tagihan ini (opsional)
+    - **Jumlah Nominal** — jumlah tagihan yang harus dibayar setiap periode
+  </Step>
+  <Step number={4} title="Pilih Frekuensi">
+    Tentukan seberapa sering tagihan ini dibuat:
+    - **Harian** — tagihan dibuat setiap hari
+    - **Mingguan** — tagihan dibuat setiap minggu
+    - **Dua Mingguan** — tagihan dibuat setiap 2 minggu
+    - **Bulanan** — tagihan dibuat setiap bulan
+    - **Kuartalan** — tagihan dibuat setiap 3 bulan
+    - **Tahunan** — tagihan dibuat setiap tahun
+  </Step>
+  <Step number={5} title="Atur Interval Hari (Opsional)">
+    Jika menggunakan frekuensi custom, Anda dapat mengatur interval hari secara spesifik. Misalnya, tagihan yang harus dibayar setiap 10 hari.
+  </Step>
+  <Step number={6} title="Atur Tanggal Jatuh Tempo">
+    Tentukan tanggal jatuh tempo untuk setiap periode tagihan. Tanggal ini adalah batas waktu pembayaran oleh anggota yang ditagih.
+  </Step>
+  <Step number={7} title="Pilih Anggota yang Ditagih">
+    Pilih anggota tim yang wajib membayar tagihan ini setiap periode. Anda bisa memilih lebih dari satu anggota.
+  </Step>
+  <Step number={8} title="Atur Notifikasi (Opsional)">
+    Atur berapa hari sebelum jatuh tempo anggota harus diingatkan. Misalnya, 3 hari sebelum jatuh tempo agar anggota memiliki waktu yang cukup untuk melakukan pembayaran.
+  </Step>
+  <Step number={9} title="Simpan Tagihan Berulang">
+    Klik **Simpan** untuk mengaktifkan tagihan berulang. Sistem akan mulai membuat tagihan sesuai jadwal yang ditentukan.
+  </Step>
+</Steps>
+
+<Callout variant="info" title="Pembuatan Otomatis">
+Tagihan berulang akan dibuat secara otomatis oleh sistem sesuai frekuensi yang ditentukan. Anda tidak perlu membuat tagihan secara manual setiap periode. Tagihan yang dihasilkan akan langsung muncul di halaman **Tagihan** sebagai tagihan biasa.
+</Callout>
+
+---
+
+### Mengelola Tagihan Berulang
+
+Setelah tagihan berulang dibuat, Anda dapat:
+
+- **Mengaktifkan/Menonaktifkan** — nonaktifkan tagihan berulang sementara tanpa menghapusnya
+- **Melihat Riwayat** — lihat daftar tagihan yang sudah dibuat oleh tagihan berulang ini
+- **Generate Manual** — buat tagihan manual dari tagihan berulang jika diperlukan sebelum jadwal
+- **Mengedit** — ubah detail tagihan berulang seperti nominal, frekuensi, atau anggota
+- **Menghapus** — hapus tagihan berulang jika tidak lagi diperlukan
+
+---
+
+### Tips Tagihan Berulang
+
+<Callout variant="tip" title="Tips Tagihan Berulang">
+
+- **Gunakan untuk pengeluaran yang benar-benar rutin** — jangan gunakan untuk tagihan satu kali
+- **Atur notifikasi beberapa hari sebelum jatuh tempo** — berikan waktu yang cukup untuk anggota melakukan pembayaran
+- **Periksa riwayat secara berkala** — pastikan tagihan sudah dibuat sesuai jadwal
+- **Nonaktifkan sementara jika perlu** — jika ada perubahan sementara, nonaktifkan daripada menghapus
+- **Gunakan frekuensi yang tepat** — pilih frekuensi yang sesuai dengan jadwal pembayaran aktual
+
+</Callout>
+
+---
+
+## Tips dan Best Practice Keuangan
+
+<Callout variant="tip" title="Tips Keuangan Tim">
+
+- **Catat semua transaksi** — input setiap pemasukan dan pengeluaran agar saldo selalu akurat
+- **Gunakan lampiran** — sertakan bukti transaksi untuk memudahkan audit di kemudian hari
+- **Buat tagihan berulang** untuk pengeluaran rutin agar tidak lupa mencatat setiap periode
+- **Verifikasi pembayaran segera** agar status tagihan selalu up to date
+- **Gunakan filter untuk laporan** — manfaatkan filter tanggal dan jenis untuk melihat laporan periode tertentu
+
+</Callout>
+
+### Urutan Prioritas Pengelolaan Keuangan
+
+| Prioritas | Aksi | Keterangan |
+|-----------|------|-----------|
+| 1 | Catat transaksi sesegera mungkin | Jangan tunda pencatatan agar tidak lupa |
+| 2 | Upload bukti pembayaran | Lakukan setelah melakukan pembayaran |
+| 3 | Verifikasi pembayaran anggota | Minimal sekali sehari untuk menjaga akurasi |
+| 4 | Review saldo kas secara berkala | Periksa mingguan untuk memastikan catatan benar |

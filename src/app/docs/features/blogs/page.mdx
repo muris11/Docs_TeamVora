@@ -1,0 +1,255 @@
+---
+title: "Fitur Blog"
+description: "Panduan lengkap membuat dan mengelola artikel blog di TeamVora, termasuk editor rich text, status publikasi, dan penjadwalan."
+---
+
+import { Callout } from "@/components/docs/callout"
+import { Steps, Step } from "@/components/docs/steps"
+import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
+# Fitur Blog
+
+Panduan membuat dan mengelola artikel blog di TeamVora. Fitur ini memungkinkan tim mempublikasikan artikel, berita, atau pengumuman kepada publik. Hanya **Super Admin** dan **Team Leader** yang memiliki akses untuk membuat, mengedit, dan menghapus artikel blog.
+
+<Callout variant="warning" title="Akses Terbatas">
+Fitur Blog hanya tersedia untuk **Team Leader** dan **Super Admin**. Anggota biasa (Member) tidak memiliki akses ke halaman ini. Jika Anda adalah anggota dan ingin membuat artikel, hubungi Team Leader untuk mendapatkan akses atau meminta pembuatan artikel.
+</Callout>
+
+---
+
+## Membuat Artikel
+
+### Siapa yang Bisa Membuat Artikel
+
+Hanya dua role yang memiliki akses untuk membuat artikel blog:
+
+| Role | Akses | Keterangan |
+|------|-------|-----------|
+| **Super Admin** | Penuh | Bisa membuat, mengedit, menghapus, dan mempublikasikan artikel dari semua tim |
+| **Team Leader** | Penuh untuk tim sendiri | Bisa membuat, mengedit, menghapus, dan mempublikasikan artikel untuk timnya |
+| **Member** | Tidak ada akses | Tidak bisa mengakses halaman blog sama sekali |
+
+<PlaceholderImage alt="Editor Blog" caption="Form pembuatan artikel blog dengan editor rich text" />
+
+---
+
+### Langkah Membuat Artikel
+
+<Steps>
+  <Step number={1} title="Buka Halaman Blog">
+    Navigasi ke menu **Blog → Kelola Blog** (untuk Team Leader) atau **Kelola Blog** dari dashboard (untuk Super Admin). Halaman daftar artikel akan ditampilkan.
+  </Step>
+  <Step number={2} title="Klik Buat Artikel Baru">
+    Tekan tombol **Buat Artikel Baru** atau **Tambah Artikel**. Formulir pembuatan artikel akan terbuka dengan tata letak dua kolom.
+  </Step>
+  <Step number={3} title="Isi Judul Artikel">
+    Masukkan judul artikel yang menarik dan deskriptif. Judul adalah hal pertama yang dilihat pembaca, pastikan judul cukup informatif namun tidak terlalu panjang. Disarankan maksimal 65 karakter untuk tampilan optimal.
+  </Step>
+  <Step number={4} title="Isi Ringkasan Artikel (Opsional)">
+    Tuliskan ringkasan singkat tentang isi artikel. Ringkasan ini ditampilkan di daftar artikel dan membantu pembaca memutuskan apakah artikel layak dibaca. Gunakan 1-2 kalimat yang padat dan menarik.
+  </Step>
+  <Step number={5} title="Isi Konten Artikel">
+    Gunakan editor rich text untuk menulis isi artikel. Editor ini mendukung berbagai format untuk membuat artikel yang profesional dan mudah dibaca.
+  </Step>
+  <Step number={6} title="Tambahkan Gambar Unggulan (Opsional)">
+    Pilih gambar unggulan (featured image) untuk artikel. Gambar ini akan ditampilkan di daftar artikel dan di bagian atas artikel saat dibaca. Anda bisa upload langsung dari komputer atau memilih dari Media Gallery tim.
+  </Step>
+  <Step number={7} title="Pilih Status Artikel">
+    Tentukan status artikel sesuai kebutuhan:
+    - **Draft** — artikel masih dalam proses pengerjaan, belum terlihat publik
+    - **Published** — artikel langsung dipublikasikan dan terlihat oleh publik
+    - **Scheduled** — artikel akan dipublikasikan secara otomatis pada waktu yang ditentukan
+  </Step>
+  <Step number={8} title="Atur Jadwal Publikasi (Jika Scheduled)">
+    Jika memilih status **Scheduled**, field tambahan **Tanggal Publikasi** akan muncul. Tentukan tanggal dan waktu kapan artikel harus dipublikasikan secara otomatis.
+  </Step>
+  <Step number={9} title="Simpan atau Publikasikan">
+    Klik **Simpan** untuk menyimpan sebagai Draft, atau klik **Publikasikan** untuk langsung mempublikasikan artikel.
+  </Step>
+</Steps>
+
+---
+
+### Editor Rich Text
+
+Editor rich text menyediakan berbagai fitur formatting untuk membuat artikel yang profesional:
+
+**Format Teks:**
+
+| Fitur | Keterangan | Contoh Penggunaan |
+|-------|-----------|------------------|
+| **Bold** | Teks tebal untuk penekanan | Kata kunci, istilah penting |
+| *Italic* | Teks miring untuk penekanan halus | Judul karya, istilah asing |
+| Underline | Teks bergaris bawah | Penting sekali |
+| Strikethrough | Teks coret untuk koreksi | Informasi yang sudah tidak berlaku |
+
+**Struktur Dokumen:**
+
+| Fitur | Keterangan | Contoh Penggunaan |
+|-------|-----------|------------------|
+| Heading (H1-H6) | Judul dan sub-judul berbagai level | Membagi artikel menjadi bagian-bagian |
+| Bullet List | List tanpa nomor | Poin-poin utama, daftar fitur |
+| Numbered List | List berurutan | Langkah-langkah, tutorial |
+| Blockquote | Kutipan | Kutipan dari sumber lain |
+
+**Elemen Tambahan:**
+
+| Fitur | Keterangan | Contoh Penggunaan |
+|-------|-----------|------------------|
+| Link | Sisipkan tautan ke halaman lain | Sumber referensi, tautan terkait |
+| Image | Sisipkan gambar dalam artikel | Ilustrasi, screenshot |
+| Code Block | Blok kode | Contoh kode program |
+| Alignment | Rata kiri, tengah, kanan, justify | Penyesuaian tata letak teks |
+
+<Callout variant="info" title="Tips Menulis Artikel">
+Gunakan heading (H2, H3) untuk membagi artikel menjadi bagian-bagian yang terstruktur. Ini tidak hanya memudahkan pembaca tetapi juga membantu SEO agar artikel lebih mudah ditemukan di mesin pencari.
+</Callout>
+
+---
+
+### Menambahkan Gambar Unggulan
+
+Gambar unggulan adalah gambar utama yang mewakili artikel. Ada dua cara untuk menambahkannya:
+
+**Cara 1 — Upload Langsung:**
+
+1. Klik area **Gambar Unggulan** di form artikel
+2. Pilih file gambar dari komputer Anda
+3. Gambar akan otomatis diunggah dan ditampilkan sebagai preview
+
+**Cara 2 — Media Picker:**
+
+1. Klik tombol **Pilih dari Media** atau ikon gallery
+2. Dialog Media Picker akan terbuka menampilkan semua gambar di galeri tim
+3. Klik gambar yang ingin dipilih
+4. Gambar akan terpilih dan ditampilkan sebagai preview
+
+<Callout variant="tip" title="Tips Gambar Unggulan">
+Gunakan gambar dengan resolusi minimal 1200x630 piksel untuk gambar unggulan. Format PNG atau JPG dengan kualitas tinggi direkomendasikan. Hindari gambar yang terlalu ramai karena gambar unggulan biasanya ditampilkan dalam ukuran kecil di daftar artikel.
+</Callout>
+
+---
+
+## Mengelola Artikel
+
+### Melihat Daftar Artikel
+
+Halaman Blog menampilkan semua artikel yang sudah dibuat dalam format daftar. Informasi yang ditampilkan meliputi:
+
+| Informasi | Keterangan |
+|-----------|-----------|
+| **Judul Artikel** | Judul lengkap artikel |
+| **Status** | Draft, Published, atau Scheduled |
+| **Penulis** | Nama anggota yang membuat artikel |
+| **Tanggal Dibuat** | Kapan artikel pertama kali dibuat |
+| **Terakhir Diperbarui** | Kapan artikel terakhir kali diubah |
+| **Ringkasan** | Cuplikan singkat isi artikel |
+
+---
+
+### Filter dan Pencarian
+
+Gunakan fitur filter untuk mempersempit daftar artikel:
+
+- **Filter Status** — tampilkan hanya artikel dengan status tertentu (Draft, Published, atau Scheduled)
+- **Pencarian** — cari artikel berdasarkan judul atau konten
+
+---
+
+### Mengedit Artikel
+
+<Steps>
+  <Step number={1} title="Buka Daftar Artikel">
+    Navigasi ke halaman Blog dan cari artikel yang ingin diedit. Gunakan filter atau pencarian jika diperlukan.
+  </Step>
+  <Step number={2} title="Klik Artikel yang Ingin Diedit">
+    Klik pada artikel dari daftar. Formulir edit artikel akan terbuka dengan data yang sudah ada.
+  </Step>
+  <Step number={3} title="Ubah Konten atau Pengaturan">
+    Ubah konten, judul, ringkasan, status, atau gambar unggulan sesuai kebutuhan. Anda bisa mengubah salah satu atau beberapa bagian sekaligus.
+  </Step>
+  <Step number={4} title="Simpan Perubahan">
+    Klik **Simpan** untuk menyimpan perubahan. Perubahan akan langsung terlihat tergantung status artikel.
+  </Step>
+</Steps>
+
+---
+
+### Menghapus Artikel
+
+<Steps>
+  <Step number={1} title="Buka Daftar Artikel">
+    Navigasi ke halaman Blog dan cari artikel yang ingin dihapus.
+  </Step>
+  <Step number={2} title="Klik Hapus">
+    Klik ikon **Hapus** atau tombol **Trash** pada artikel yang ingin dihapus.
+  </Step>
+  <Step number={3} title="Konfirmasi Penghapusan">
+    Konfirmasi bahwa Anda yakin ingin menghapus artikel. Penghapusan bersifat permanen.
+  </Step>
+</Steps>
+
+<Callout variant="danger" title="Peringatan Penghapusan">
+Penghapusan artikel bersifat permanen dan tidak dapat dibatalkan. Pastikan Anda sudah yakin sebelum menghapus. Jika ragu, ubah status artikel menjadi **Draft** terlebih dahulu sebagai cadangan.
+</Callout>
+
+---
+
+### Status Blog
+
+Artikel memiliki tiga status yang menunjukkan ketersediaan artikel:
+
+| Status | Keterangan | Visibilitas |
+|--------|-----------|------------|
+| **Draft** | Artikel masih dalam proses pengerjaan | Hanya terlihat oleh penulis dan admin |
+| **Published** | Artikel sudah dipublikasikan | Terlihat oleh publik di halaman blog |
+| **Scheduled** | Artikel akan dipublikasikan otomatis sesuai jadwal | Belum terlihat publik, akan muncul saat jadwal tiba |
+
+<Callout variant="info" title="Artikel Terjadwal">
+Ketika memilih status **Scheduled**, artikel tidak akan terlihat oleh publik hingga waktu publikasi yang ditentukan tiba. Sistem akan secara otomatis mengubah status dari Scheduled menjadi Published pada tanggal dan waktu yang sudah diatur. Anda bisa mengedit atau membatalkan jadwal kapan saja selama artikel masih berstatus Scheduled.
+</Callout>
+
+---
+
+### Memublikasikan Artikel
+
+Artikel dapat dipublikasikan dengan dua cara:
+
+**Publikasi Langsung:**
+
+1. Buka artikel yang sudah final
+2. Ubah status dari **Draft** ke **Published**
+3. Klik **Simpan** — artikel langsung terlihat oleh publik
+
+**Publikasi Terjadwal:**
+
+1. Buka artikel yang sudah final
+2. Ubah status ke **Scheduled**
+3. Atur tanggal dan waktu publikasi
+4. Klik **Simpan** — artikel akan dipublikasikan otomatis sesuai jadwal
+
+<PlaceholderImage alt="Daftar Artikel Blog" caption="Daftar artikel dengan indikator status dan aksi" />
+
+---
+
+## Tips dan Best Practice Blog
+
+<Callout variant="tip" title="Tips Blogging">
+
+- **Tulis ringkasan yang menarik** — ringkasan muncul di daftar artikel dan mempengaruhi minat pembaca untuk membuka artikel
+- **Gunakan gambar unggulan** — artikel dengan gambar lebih menarik perhatian dan memiliki tingkat klik lebih tinggi
+- **Simpan sebagai Draft dulu** — sebelum dipublikasikan, pastikan konten sudah final dan tidak ada kesalahan
+- **Gunakan Scheduled untuk konsistensi** — jadwalkan artikel agar rutin dipublikasikan sesuai content calendar
+- **Manfaatkan Media Picker** — gunakan gambar dari galeri tim untuk konsistensi visual antar artikel
+- **Gunakan heading yang terstruktur** — H2 untuk bagian utama, H3 untuk sub-bagian
+- **Tulis judul yang SEO-friendly** — judul yang mengandung kata kunci membantu artikel lebih mudah ditemukan
+
+</Callout>
+
+### Ringkasan Status Blog
+
+| Kode | Label | Keterangan | Visibilitas Publik |
+|------|-------|-----------|-------------------|
+| `draft` | Draft | Artikel belum siap publikasi | Tidak terlihat |
+| `published` | Published | Artikel sudah terlihat publik | Terlihat |
+| `scheduled` | Scheduled | Menunggu waktu publikasi | Tidak terlihat (sampai jadwal tiba) |

@@ -1,0 +1,256 @@
+---
+title: "Fitur Media"
+description: "Panduan lengkap mengelola dokumen dan galeri gambar di TeamVora untuk penyimpanan file terpusat tim."
+---
+
+import { Callout } from "@/components/docs/callout"
+import { Steps, Step } from "@/components/docs/steps"
+import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
+# Fitur Media
+
+Panduan mengelola dokumen dan galeri tim di TeamVora. Fitur ini menyediakan penyimpanan terpusat untuk semua file yang dibutuhkan tim, mulai dari dokumen kerja hingga gambar untuk keperluan publikasi. Semua anggota tim bisa mengunggah, mengelola, dan mengakses file yang tersimpan.
+
+<Callout variant="info" title="Tentang Fitur Media">
+Fitur Media dibagi menjadi dua bagian: **Dokumen** untuk file non-gambar (PDF, Word, Excel) dan **Galeri** untuk gambar (JPG, PNG, GIF). Keduanya menyediakan penyimpanan terpusat yang bisa diakses oleh seluruh anggota tim.
+</Callout>
+
+---
+
+## Dokumen
+
+### Apa itu Dokumen
+
+Dokumen adalah fitur penyimpanan file untuk tim. Anda bisa mengunggah dokumen penting seperti kontrak kerja, laporan keuangan, proposal proyek, atau file kerja lainnya. Semua anggota tim bisa mengakses dokumen yang diunggah, sehingga tidak ada dokumen yang tersembunyi atau sulit ditemukan.
+
+Fitur Dokumen menampilkan semua file dalam format grid kartu yang rapi. Setiap kartu menampilkan informasi lengkap tentang file, termasuk nama, ukuran, tipe file, dan siapa yang mengunggahnya.
+
+<PlaceholderImage alt="Halaman Dokumen" caption="Tampilan halaman Dokumen dengan grid kartu file" />
+
+---
+
+### Mengunggah Dokumen
+
+<Steps>
+  <Step number={1} title="Buka Menu Dokumen">
+    Navigasi ke menu **Media → Dokumen** dari sidebar. Halaman Dokumen akan menampilkan daftar semua dokumen yang sudah diunggah oleh anggota tim.
+  </Step>
+  <Step number={2} title="Klik Unggah Dokumen">
+    Tekan tombol **Unggah Dokumen** atau **Unggah** yang terletak di pojok kanan atas. Anda juga bisa menyeret file langsung ke area upload.
+  </Step>
+  <Step number={3} title="Pilih File dari Komputer">
+    Pilih file dokumen yang ingin diunggah dari komputer Anda. Pastikan file sesuai dengan format yang didukung dan tidak melebihi batas ukuran maksimal.
+  </Step>
+  <Step number={4} title="Beri Nama Dokumen">
+    Setelah file dipilih, beri nama tampilan yang deskriptif untuk dokumen ini. Nama yang jelas memudahkan anggota lain menemukan dokumen yang dibutuhkan.
+  </Step>
+  <Step number={5} title="Unggah dan Tunggu Proses">
+    Klik **Unggah** untuk memulai proses unggah. Tunggu hingga proses selesai. Dokumen baru akan langsung muncul di daftar dokumen.
+  </Step>
+</Steps>
+
+---
+
+### Mengelola Dokumen
+
+Setiap dokumen memiliki beberapa aksi yang tersedia:
+
+| Aksi | Keterangan |
+|------|-----------|
+| **Edit (Rename)** | Mengubah nama tampilan dokumen tanpa mengubah file asli |
+| **Salin URL** | Menyalin link langsung ke dokumen untuk dibagikan ke anggota lain |
+| **Hapus** | Menghapus dokumen dari penyimpanan secara permanen |
+| **Buka** | Membuka dokumen di tab baru browser untuk melihat isinya |
+
+**Informasi yang Tersedia pada Setiap Dokumen:**
+
+- **Nama File** — nama file seperti yang diunggah
+- **Diunggah Oleh** — nama anggota yang mengunggah file
+- **Ukuran** — ukuran file dalam MB atau KB
+- **Tipe File** — MIME type (contoh: `application/pdf`, `application/msword`)
+- **Tanggal Unggah** — kapan file diunggah ke sistem
+
+<Callout variant="info" title="Membuka Dokumen">
+Klik kartu dokumen untuk membuka file di tab baru browser. Pastikan browser Anda mendukung preview format file yang diunggah. Misalnya, browser modern sudah mendukung preview PDF dan gambar secara native.
+</Callout>
+
+---
+
+### Format Dokumen yang Didukung
+
+| Format | Ekstensi | Keterangan |
+|--------|---------|-----------|
+| PDF | `.pdf` | Dokumen Portable Document Format |
+| Microsoft Word | `.doc`, `.docx` | Dokumen Word dari Microsoft Office |
+| Microsoft Excel | `.xls`, `.xlsx` | Spreadsheet dari Microsoft Office |
+| Microsoft PowerPoint | `.ppt`, `.pptx` | Presentasi dari Microsoft Office |
+| Teks | `.txt` | File teks biasa tanpa format |
+| CSV | `.csv` | Comma-Separated Values untuk data tabular |
+
+<Callout variant="warning" title="Batas Ukuran File">
+Ukuran maksimal setiap file adalah **10MB**. Pastikan ukuran file tidak melebihi batas ini sebelum mengunggah. Jika file terlalu besar, kompres terlebih dahulu atau bagi menjadi beberapa bagian kecil.
+</Callout>
+
+---
+
+### Tips Mengelola Dokumen
+
+<Callout variant="tip" title="Tips Dokumen">
+
+- **Beri nama deskriptif** — gunakan nama yang jelas dan terstruktur (contoh: "Laporan-Keuangan-November-2024.pdf")
+- **Gunakan format yang konsisten** — pilih format standar untuk setiap jenis dokumen
+- **Hapus dokumen yang tidak diperlukan** — jaga agar penyimpanan tetap rapi dan tidak penuh
+- **Salin URL untuk dibagikan** — gunakan fitur Salin URL untuk membagikan file ke anggota lain atau di luar tim
+- **Periksa ukuran file** — pastikan ukuran file sesuai batas upload sebelum mengunggah
+
+</Callout>
+
+---
+
+## Galeri
+
+### Apa itu Galeri
+
+Galeri adalah fitur penyimpanan gambar untuk tim. Gambar yang diunggah bisa digunakan untuk blog, profil tim, postingan media sosial, atau keperluan lainnya. Galeri menyediakan tampilan grid yang optimal untuk preview gambar, termasuk fitur lightbox untuk melihat gambar dalam ukuran penuh.
+
+Berbeda dengan Dokumen yang fokus pada file kerja, Galeri dioptimasi khusus untuk gambar sehingga Anda bisa melihat preview sebelum mengunduh atau menggunakannya.
+
+<PlaceholderImage alt="Galeri Media" caption="Tampilan Galeri dengan grid gambar responsif dan preview" />
+
+---
+
+### Mengunggah Gambar
+
+<Steps>
+  <Step number={1} title="Buka Menu Galeri">
+    Navigasi ke **Media → Galeri** dari sidebar. Halaman Galeri akan menampilkan semua gambar yang sudah diunggah dalam format grid.
+  </Step>
+  <Step number={2} title="Klik Unggah Gambar">
+    Tekan tombol **Unggah Gambar** atau **Unggah**. Anda juga bisa menyeret gambar langsung ke area upload.
+  </Step>
+  <Step number={3} title="Pilih Gambar dari Komputer">
+    Pilih gambar yang ingin diunggah. Pastikan gambar dalam format yang didukung dan tidak melebihi batas ukuran.
+  </Step>
+  <Step number={4} title="Beri Nama Gambar">
+    Beri nama tampilan yang deskriptif untuk gambar. Nama yang jelas memudahkan pencarian di kemudian hari.
+  </Step>
+  <Step number={5} title="Unggah dan Tunggu Proses">
+    Klik **Unggah** untuk memulai proses. Tunggu hingga gambar berhasil diunggah dan muncul di galeri.
+  </Step>
+</Steps>
+
+---
+
+### Melihat Gambar di Galeri
+
+Galeri menyediakan beberapa cara untuk melihat gambar:
+
+**Tampilan Grid:**
+
+- Gambar ditampilkan dalam grid responsif (2-4 kolom tergantung ukuran layar)
+- Setiap gambar menampilkan preview thumbnail
+- Nama file ditampilkan di bawah thumbnail
+
+**Lightbox (Tampilan Penuh):**
+
+1. Klik pada gambar di galeri
+2. Lightbox akan terbuka menampilkan gambar dalam ukuran penuh
+3. Di lightbox Anda bisa melihat:
+   - Gambar dalam resolusi penuh
+   - Nama file
+   - Diunggah oleh siapa
+   - Tanggal upload
+4. Klik tombol **X** atau area luar gambar untuk menutup lightbox
+
+---
+
+### Aksi pada Gambar
+
+| Aksi | Keterangan |
+|------|-----------|
+| **Edit (Rename)** | Mengubah nama tampilan gambar tanpa mengubah file asli |
+| **Salin URL** | Menyalin link langsung ke gambar untuk digunakan di blog, profil, atau keperluan lain |
+| **Hapus** | Menghapus gambar dari galeri secara permanen |
+| **Lihat** | Membuka lightbox untuk melihat gambar dalam ukuran penuh |
+
+---
+
+### Format Gambar yang Didukung
+
+| Format | Ekstensi | Keterangan |
+|--------|---------|-----------|
+| JPEG | `.jpg`, `.jpeg` | Format gambar standar untuk foto |
+| PNG | `.png` | Gambar dengan dukungan transparansi |
+| GIF | `.gif` | Gambar animasi atau statis |
+| WebP | `.webp` | Format gambar modern dengan kompresi lebih baik |
+| SVG | `.svg` | Gambar vektor untuk logo dan ikon |
+
+<Callout variant="info" title="Format SVG">
+Format SVG (Scalable Vector Graphics) sangat direkomendasikan untuk logo dan ikon karena bisa diubah ukurannya tanpa kehilangan kualitas. Gunakan SVG untuk logo tim atau gambar vektor lainnya.
+</Callout>
+
+---
+
+### Tips Galeri
+
+<Callout variant="tip" title="Tips Galeri">
+
+- **Gunakan Galeri untuk semua gambar** — gambar di Galeri memiliki preview yang lebih baik dibanding Dokumen
+- **Salin URL untuk digunakan di blog** — gambar dari Galeri bisa langsung disisipkan ke artikel blog
+- **Kompres gambar sebelum upload** — ukuran yang lebih kecil membuat upload lebih cepat
+- **Gunakan format yang tepat** — JPG untuk foto, PNG untuk gambar transparan, SVG untuk logo
+- **Hapus gambar yang sudah tidak dipakai** — jaga agar galeri tetap rapi
+
+</Callout>
+
+---
+
+## Format yang Didukung Secara Lengkap
+
+### Dokumen
+
+| Format | Ekstensi | Keterangan |
+|--------|---------|-----------|
+| PDF | `.pdf` | Dokumen PDF |
+| Microsoft Word | `.doc`, `.docx` | Dokumen Word |
+| Microsoft Excel | `.xls`, `.xlsx` | Spreadsheet |
+| Microsoft PowerPoint | `.ppt`, `.pptx` | Presentasi |
+| Teks | `.txt` | File teks biasa |
+| CSV | `.csv` | Data tabular |
+
+### Gambar (Galeri)
+
+| Format | Ekstensi | Keterangan |
+|--------|---------|-----------|
+| JPEG | `.jpg`, `.jpeg` | Foto standar |
+| PNG | `.png` | Gambar dengan transparansi |
+| GIF | `.gif` | Gambar animasi |
+| WebP | `.webp` | Format gambar modern |
+| SVG | `.svg` | Gambar vektor |
+
+### Lampiran Log Harian
+
+| Format | Ekstensi |
+|--------|---------|
+| PDF | `.pdf` |
+| Microsoft Word | `.doc`, `.docx` |
+| JPEG | `.jpg`, `.jpeg` |
+| PNG | `.png` |
+
+<Callout variant="warning" title="Batas Ukuran File">
+Untuk semua jenis file, ukuran maksimal adalah **10MB per file**. Pastikan ukuran file sesuai batas ini sebelum mengunggah. Jika file terlalu besar, gunakan tools kompresi untuk memperkecil ukuran.
+</Callout>
+
+---
+
+## Tips dan Best Practice Media
+
+<Callout variant="tip" title="Tips Media Tim">
+
+- **Beri nama deskriptif** — gunakan nama yang jelas agar mudah ditemukan (contoh: "Laporan-Keuangan-November-2024.pdf")
+- **Gunakan Galeri untuk gambar** — gambar di Galeri memiliki preview yang lebih baik dan fitur lightbox
+- **Salin URL untuk dibagikan** — gunakan fitur Salin URL untuk membagikan file ke anggota lain
+- **Hapus file yang tidak diperlukan** — jaga agar galeri dan dokumen tetap rapi dan tidak penuh
+- **Periksa ukuran file** — pastikan ukuran file sesuai batas upload sebelum mengunggah
+
+</Callout>

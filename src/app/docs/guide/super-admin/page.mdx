@@ -1,0 +1,353 @@
+---
+title: "Panduan Super Admin"
+description: "Cara mengelola platform TeamVora sebagai Super Admin"
+---
+
+import { Callout } from "@/components/docs/callout";
+import { Steps, Step } from "@/components/docs/steps";
+import { PlaceholderImage } from "@/components/docs/placeholder-image";
+
+# Panduan Super Admin
+
+Panduan lengkap untuk mengelola seluruh aspek platform TeamVora. Super Admin memiliki hak akses penuh dan bertanggung jawab atas pengelolaan tim, pengguna, konten, pengaturan platform, dan monitoring infrastruktur.
+
+---
+
+## Apa itu Super Admin
+
+Super Admin adalah role dengan akses penuh ke seluruh platform TeamVora. Berbeda dengan Team Leader yang hanya bisa mengelola timnya sendiri, Super Admin memiliki wewenang untuk mengelola semua tim, semua pengguna, seluruh konten blog, pengaturan platform, konfigurasi email, optimasi SEO, dan monitoring status sistem secara menyeluruh.
+
+Super Admin tidak terikat pada satu tim tertentu. Artinya, mereka bisa melihat, mengedit, dan menghapus data dari setiap tim yang ada di platform. Role ini memiliki otorisasi tertinggi dalam hierarki TeamVora, sehingga semua fitur dan pengaturan dapat diakses tanpa batasan.
+
+Beberapa kemampuan eksklusif Super Admin yang tidak dimiliki role lain adalah:
+
+- **Impersonate User** — Login sementara sebagai pengguna lain untuk keperluan troubleshooting
+- **Kelola Pengaturan Platform** — Mengubah site name, logo, favicon, dan konfigurasi umum lainnya
+- **Konfigurasi Email** — Mengatur SMTP server untuk pengiriman email notifikasi
+- **Kelola .env** — Mengedit variabel environment langsung dari panel admin
+- **Monitoring Status Sistem** — Melihat status web server, database, Redis cache, dan storage
+- **Kelola Seluruh Blog** — Membuat, mengedit, dan menghapus artikel dari semua pengguna
+
+<Callout type="warning">
+Super Admin memiliki akses penuh yang bersifat destruktif. Selalu berhati-hati saat mengubah pengaturan atau menghapus data. Pastikan Anda memahami dampak dari setiap tindakan sebelum melanjutkan.
+</Callout>
+
+---
+
+## Dashboard Super Admin
+
+Dashboard Super Admin adalah halaman utama yang memberikan gambaran menyeluruh tentang kondisi dan aktivitas seluruh platform TeamVora. Semua informasi ditampilkan dalam format visual berupa kartu statistik dan grafik interaktif sehingga Anda bisa memantau kesehatan platform secara real-time.
+
+Berikut penjelasan masing-masing komponen yang ditampilkan di dashboard:
+
+- **Total Tim Terdaftar** — Menampilkan jumlah seluruh tim yang sudah dibuat di platform. Angka ini membantu Anda memahami seberapa luas penggunaan TeamVora oleh organisasi atau komunitas.
+- **Pengguna Aktif** — Menampilkan jumlah pengguna yang sedang aktif secara real-time menggunakan Server-Sent Events (SSE). Sistem ini memperbarui data tanpa perlu refresh halaman, sehingga Anda selalu mendapatkan informasi terkini tentang berapa banyak pengguna yang sedang online.
+- **Artikel Blog** — Menampilkan total jumlah artikel blog yang sudah dibuat oleh seluruh pengguna di platform. Termasuk artikel dalam status draft, published, dan scheduled.
+- **Pertumbuhan Pengguna** — Grafik yang menunjukkan tren pertumbuhan jumlah pengguna selama 7 bulan terakhir. Grafik ini membantu Anda menganalisis apakah platform mengalami peningkatan pengguna yang signifikan atau perlu strategi pertumbuhan baru.
+- **Aktivitas Platform Mingguan** — Grafik yang menampilkan aktivitas harian platform, termasuk jumlah log yang dibuat dan tugas yang diselesaikan. Informasi ini membantu Anda memahami pola penggunaan platform dari waktu ke waktu.
+- **Status Infrastruktur** — Indikator status komponen infrastruktur: Web Server (Nginx), Database (PostgreSQL), dan Redis Cache. Setiap komponen ditandai dengan status hijau (normal), kuning (peringatan), atau merah (gangguan).
+- **Penggunaan Penyimpanan** — Diagram distribusi penggunaan storage R2 yang menunjukkan berapa banyak aset file (gambar, dokumen, lampiran) yang tersimpan dan kapasitas yang masih tersedia.
+
+<PlaceholderImage title="Dashboard Super Admin" />
+
+---
+
+## Kelola Tim
+
+Super Admin memiliki wewenang penuh untuk mengelola seluruh tim yang terdaftar di platform. Fitur ini memungkinkan Anda membuat tim baru, mengubah informasi tim, menambah atau mengurangi anggota, hingga menghapus tim yang tidak lagi diperlukan.
+
+### Melihat Daftar Tim
+
+Semua tim yang terdaftar di platform dapat dilihat dalam satu halaman dengan tampilan tabel yang rapi.
+
+<Steps>
+  <Step title="Buka Menu Kelola Tim">
+    Di sidebar kiri, klik menu **Platform** lalu pilih **Kelola Tim**. Anda akan diarahkan ke halaman daftar tim.
+  </Step>
+  <Step title="Lihat Daftar Tim">
+    Semua tim akan ditampilkan dalam tabel dengan kolom: **Nama Tim**, **Ketua Tim**, **Jumlah Anggota**, dan **Tanggal Dibuat**. Tabel ini bisa diurutkan dengan mengklik header kolom.
+  </Step>
+  <Step title="Cari Tim Tertentu">
+    Gunakan kolom pencarian di bagian atas tabel untuk mencari tim berdasarkan nama. Ketik nama tim dan sistem akan memfilter hasil secara otomatis.
+  </Step>
+  <Step title="Lihat Detail Tim">
+    Klik nama tim yang ingin Anda lihat untuk membuka halaman detail. Di sana Anda bisa melihat semua anggota, aktivitas terkini, dan pengaturan tim.
+  </Step>
+</Steps>
+
+### Membuat Tim Baru
+
+Ketika ada organisasi atau kelompok baru yang ingin menggunakan TeamVora, Anda bisa membuat tim baru melalui panel admin.
+
+<Steps>
+  <Step title="Klik Buat Tim Baru">
+    Di halaman Kelola Tim, klik tombol **Buat Tim Baru** yang terletak di pojok kanan atas halaman.
+  </Step>
+  <Step title="Isi Nama Tim">
+    Masukkan nama tim yang ingin dibuat. Nama tim harus unik dan tidak boleh sama dengan tim lain yang sudah ada di platform.
+  </Step>
+  <Step title="Isi Deskripsi Tim">
+    Masukkan deskripsi singkat tentang tujuan atau fungsi tim ini. Bagian ini bersifat opsional, tetapi sangat disarankan agar anggota baru bisa memahami konteks tim dengan cepat.
+  </Step>
+  <Step title="Pilih Ketua Tim">
+    Pilih salah satu pengguna yang sudah terdaftar di platform sebagai ketua tim. Ketua tim akan memiliki otorisasi khusus untuk mengelola anggota dan pengaturan timnya.
+  </Step>
+  <Step title="Simpan Tim">
+    Klik tombol **Simpan** untuk membuat tim baru. Tim akan langsung muncul di daftar dan ketua tim yang dipilih akan menerima notifikasi bahwa ia ditunjuk sebagai ketua tim.
+  </Step>
+</Steps>
+
+<PlaceholderImage title="Form Buat Tim" />
+
+### Mengedit Tim
+
+Jika ada perubahan informasi tim seperti nama, deskripsi, atau pergantian ketua tim, Anda bisa mengeditnya kapan saja.
+
+<Steps>
+  <Step title="Pilih Tim yang Akan Diedit">
+    Di daftar tim, klik nama tim yang ingin Anda ubah informasinya.
+  </Step>
+  <Step title="Ubah Informasi Tim">
+    Modifikasi kolom yang ingin diubah, seperti nama tim, deskripsi, atau pilih ketua tim baru dari dropdown yang tersedia.
+  </Step>
+  <Step title="Simpan Perubahan">
+    Klik tombol **Simpan Perubahan** untuk menyimpan pembaruan. Semua anggota tim akan melihat perubahan ini secara langsung.
+  </Step>
+</Steps>
+
+### Menghapus Tim
+
+Penghapusan tim bersifat permanen dan tidak bisa dibatalkan. Semua data terkait termasuk anggota, log aktivitas, dan dokumen akan ikut terhapus.
+
+<Steps>
+  <Step title="Pilih Tim yang Akan Dihapus">
+    Di daftar tim, klik nama tim yang ingin dihapus.
+  </Step>
+  <Step title="Klik Tombol Hapus">
+    Di halaman detail tim, klik tombol **Hapus Tim** yang biasanya berwarna merah di bagian bawah halaman.
+  </Step>
+  <Step title="Konfirmasi Penghapusan">
+    Sistem akan meminta konfirmasi ketiga kalinya. Ketik nama tim untuk memverifikasi bahwa Anda benar-benar ingin menghapus tim ini.
+  </Step>
+  <Step title="Selesai">
+    Tim akan dihapus dari sistem beserta semua data terkait. Proses ini tidak bisa dibatalkan.
+  </Step>
+</Steps>
+
+<Callout type="danger">
+Penghapusan tim bersifat permanen dan tidak dapat dibatalkan. Semua data termasuk anggota, dokumen, log aktivitas, dan konfigurasi tim akan dihapus selamanya. Pastikan Anda sudah melakukan backup jika diperlukan sebelum melanjutkan.
+</Callout>
+
+---
+
+## Kelola User
+
+Super Admin bisa mengelola seluruh pengguna yang terdaftar di platform TeamVora, termasuk melihat daftar pengguna, mengubah role, menghapus akun, dan menggunakan fitur impersonate untuk troubleshooting.
+
+### Melihat Daftar User
+
+Halaman Kelola User menampilkan semua pengguna yang terdaftar di platform dalam format tabel yang mudah dibaca dan difilter.
+
+<Steps>
+  <Step title="Buka Menu Kelola User">
+    Di sidebar, klik menu **Platform** lalu pilih **Kelola User**. Daftar seluruh pengguna akan ditampilkan.
+  </Step>
+  <Step title="Lihat Informasi User">
+    Tabel menampilkan kolom: **Nama**, **Email**, **Role**, **Tim**, dan **Tanggal Daftar**. Anda bisa mengurutkan tabel dengan mengklik header kolom mana pun.
+  </Step>
+  <Step title="Filter Berdasarkan Role atau Tim">
+    Gunakan filter di bagian atas tabel untuk mempersempit hasil. Anda bisa memfilter berdasarkan role (Super Admin, Team Leader, Member) atau berdasarkan tim tertentu.
+  </Step>
+  <Step title="Cari User Tertentu">
+    Ketik nama atau email di kolom pencarian untuk menemukan pengguna spesifik dengan cepat.
+  </Step>
+</Steps>
+
+### Mengubah Role User
+
+Role menentukan tingkat akses dan otorisasi pengguna di platform. Super Admin bisa mengubah role pengguna kapan saja sesuai kebutuhan.
+
+<Steps>
+  <Step title="Pilih User">
+    Di daftar pengguna, klik nama user yang ingin Anda ubah role-nya.
+  </Step>
+  <Step title="Pilih Role Baru">
+    Di halaman detail user, pilih role baru dari dropdown: **Super Admin** (akses penuh), **Team Leader** (kelola tim), atau **Member** (akses standar).
+  </Step>
+  <Step title="Simpan Perubahan">
+    Klik tombol **Simpan** untuk menerapkan perubahan role. Perubahan berlaku langsung dan pengguna akan memiliki akses sesuai role baru mereka segera setelah refresh halaman.
+  </Step>
+</Steps>
+
+<Callout type="warning">
+Mengubah role menjadi Super Admin memberikan akses penuh kepada pengguna tersebut, termasuk kemampuan untuk menghapus tim, mengubah pengaturan platform, dan mengakses data sensitif. Hanya berikan role Super Admin kepada pengguna yang benar-benar Anda percaya dan pahami konsekuensinya.
+</Callout>
+
+### Fitur Impersonate
+
+Fitur Impersonate memungkinkan Super Admin login sementara sebagai pengguna lain. Fitur ini sangat berguna untuk keperluan troubleshooting ketika seorang pengguna melaporkan masalah atau error yang tidak bisa direplikasi dari akun Super Admin.
+
+<Steps>
+  <Step title="Pilih User yang Akan Di-Impersonate">
+    Di daftar pengguna, cari dan klik user yang ingin Anda impersonate.
+  </Step>
+  <Step title="Klik Tombol Impersonate">
+    Di halaman detail user, klik tombol **Impersonate**. Sistem akan memverifikasi otorisasi Anda sebelum melanjutkan.
+  </Step>
+  <Step title="Login sebagai User Lain">
+    Anda akan secara otomatis login sebagai user tersebut. Semua halaman dan fitur yang bisa diakses user tersebut akan tersedia untuk Anda. Di bagian header akan muncul banner peringatan yang menunjukkan bahwa Anda sedang dalam mode impersonation.
+  </Step>
+  <Step title="Navigasi dan Periksa Masalah">
+    Jelajahi platform dari perspektif user tersebut. Coba replikasi masalah yang dilaporkan, periksa pengaturan, dan identifikasi akar masalahnya.
+  </Step>
+  <Step title="Kembali ke Akun Super Admin">
+    Setelah selesai troubleshooting, klik tombol **Stop Impersonation** di banner header untuk kembali ke akun Super Admin Anda. Mode impersonation akan berakhir dan Anda akan login kembali sebagai Super Admin.
+  </Step>
+</Steps>
+
+<Callout type="warning">
+Gunakan fitur Impersonate secara bertanggung jawab dan hanya untuk keperluan troubleshooting yang sah. Jangan menyalahgunakan fitur ini untuk mengakses data pribadi pengguna tanpa alasan yang jelas. Semua aktivitas impersonation dicatat dalam log audit untuk keamanan.
+</Callout>
+
+---
+
+## Blog Management
+
+Super Admin bisa membuat, mengedit, menghapus, dan mengelola seluruh artikel blog yang ada di platform. Termasuk mengatur status publikasi, menjadwalkan artikel, dan mengelola konten media.
+
+### Membuat Artikel Blog
+
+Proses pembuatan artikel blog baru melalui panel admin sangat mudah dan intuitif.
+
+<Steps>
+  <Step title="Buka Menu Kelola Blog">
+    Di sidebar, klik menu **Konten & Media** lalu pilih **Kelola Blog**. Anda akan melihat daftar semua artikel blog yang sudah ada.
+  </Step>
+  <Step title="Klik Buat Artikel Baru">
+    Klik tombol **Buat Artikel Baru** di pojok kanan atas halaman. Formulir pembuatan artikel akan terbuka.
+  </Step>
+  <Step title="Isi Judul Artikel">
+    Masukkan judul artikel yang menarik dan deskriptif. Judul akan ditampilkan di daftar blog dan di halaman artikel.
+  </Step>
+  <Step title="Isi Konten Artikel">
+    Gunakan editor rich text untuk menulis konten artikel. Editor mendukung pemformatan teks, penambahan gambar, tautan, kutipan, dan elemen konten lainnya. Anda juga bisa beralih ke mode Markdown jika lebih nyaman.
+  </Step>
+  <Step title="Tambahkan Gambar Unggulan">
+    Upload gambar unggulan (featured image) yang akan ditampilkan sebagai thumbnail artikel di daftar blog dan di media sosial saat artikel dibagikan.
+  </Step>
+  <Step title="Pilih Status Publikasi">
+    Pilih salah satu status: **Draft** (artikel masih dalam proses), **Published** (artikel langsung dipublikasikan), atau **Scheduled** (artikel akan dipublikasikan otomatis sesuai jadwal).
+  </Step>
+  <Step title="Atur Jadwal Publikasi">
+    Jika memilih status Scheduled, atur tanggal dan waktu publikasi yang diinginkan. Artikel akan otomatis dipublikasikan saat jadwal yang ditentukan tiba.
+  </Step>
+  <Step title="Simpan atau Publikasikan">
+    Klik **Simpan** untuk menyimpan sebagai draft, atau klik **Publikasikan** untuk langsung mempublikasikan artikel ke publik.
+  </Step>
+</Steps>
+
+### Mengelola Artikel
+
+Setelah artikel dibuat, Anda bisa mengelolanya dari halaman daftar blog.
+
+- **Melihat Semua Artikel** — Daftar artikel ditampilkan dengan informasi judul, penulis, status, dan tanggal terakhir diperbarui.
+- **Filter Berdasarkan Status** — Gunakan filter untuk memisahkan artikel berdasarkan status: draft, published, atau scheduled.
+- **Mengedit Artikel** — Klik artikel untuk membuka editor dan melakukan perubahan pada konten, judul, atau pengaturan publikasi.
+- **Menghapus Artikel** — Pilih artikel yang ingin dihapus dan konfirmasi penghapusan. Artikel yang sudah dihapus tidak bisa dipulihkan.
+- **Publish atau Unpublish** — Ubah status artikel dari draft ke published atau sebaliknya dengan satu klik.
+
+<PlaceholderImage title="Manajemen Blog" />
+
+---
+
+## Pengaturan Platform
+
+Pengaturan platform memungkinkan Super Admin mengkonfigurasi berbagai aspek teknis dan konten TeamVora. Setiap bagian pengaturan mengontrol fungsi tertentu dari platform.
+
+### General Settings
+
+Pengaturan umum mengontrol identitas visual dan informasi dasar platform yang ditampilkan di seluruh halaman.
+
+- **Site Name** — Nama platform yang ditampilkan di sidebar, header, footer, title bar browser, dan berbagai tempat lainnya. Pastikan nama ini konsisten dengan branding organisasi Anda.
+- **Tagline** — Deskripsi singkat tentang platform yang biasanya ditampilkan di bawah nama site di halaman utama. Gunakan tagline yang jelas dan informatif.
+- **Logo** — Logo utama yang ditampilkan di sidebar navigasi dan header. Upload file dalam format SVG atau PNG dengan resolusi tinggi untuk hasil terbaik.
+- **Favicon** — Ikon kecil yang ditampilkan di tab browser. Favicon membantu pengguna mengenali situs Anda di antara banyak tab yang terbuka. Gunakan ukuran 32x32 atau 16x16 piksel.
+
+### Marketing Settings
+
+Pengaturan konten halaman marketing memungkinkan Anda mengontrol informasi yang ditampilkan di halaman publik TeamVora.
+
+- **Landing** — Mengatur konten hero section di halaman utama, termasuk judul utama, subjudul, gambar hero, daftar fitur unggulan, dan testimonial dari pengguna.
+- **Tentang** — Menulis dan mengedit halaman tentang TeamVora yang menjelaskan visi, misi, dan latar belakang platform.
+- **Fitur** — Mengelola daftar fitur yang ditampilkan di halaman marketing. Anda bisa menambahkan, mengedit, atau menghapus fitur yang ditampilkan kepada pengunjung.
+- **Panduan** — Menulis FAQ (Frequently Asked Questions) dan panduan penggunaan dasar untuk membantu pengguna baru memahami cara menggunakan platform.
+- **Bantuan** — Mengelola artikel bantuan dan tutorial yang membantu pengguna menyelesaikan masalah umum.
+- **Privasi** — Menulis dan memperbarui kebijakan privasi yang menjelaskan bagaimana data pengguna dikumpulkan, digunakan, dan dilindungi oleh platform.
+- **Syarat** — Menulis syarat dan ketentuan penggunaan platform yang menjadi dasar hukum penggunaan layanan TeamVora.
+
+### Email Settings
+
+Konfigurasi SMTP diperlukan agar platform bisa mengirim email notifikasi, verifikasi akun, reset password, dan komunikasi lainnya kepada pengguna.
+
+Konfigurasi yang perlu diatur:
+
+- **SMTP Host** — Alamat server SMTP yang akan digunakan untuk mengirim email (contoh: smtp.gmail.com).
+- **SMTP Port** — Port yang digunakan oleh server SMTP (contoh: 587 untuk TLS atau 465 untuk SSL).
+- **SMTP Username** — Username atau alamat email yang digunakan untuk autentikasi ke server SMTP.
+- **SMTP Password** — Password atau aplikasi password untuk autentikasi ke server SMTP.
+- **From Email** — Alamat email pengirim yang akan ditampilkan sebagai pengirim di kotak masuk penerima.
+- **From Name** — Nama pengirim yang akan ditampilkan di samping alamat email pengirim.
+
+<Callout type="info">
+Selalu gunakan fitur **Test Email** untuk mengirim email percobaan sebelum menyimpan konfigurasi. Pastikan email test berhasil diterima di kotak masuk (bukan spam) sebelum mengaktifkan konfigurasi SMTP untuk penggunaan produksi.
+</Callout>
+
+### SEO Settings
+
+Pengaturan SEO (Search Engine Optimization) membantu mesin pencari seperti Google memahami konten situs Anda dan menampilkannya di hasil pencarian dengan lebih baik.
+
+- **Meta Title** — Judul halaman yang ditampilkan di hasil pencarian dan tab browser. Idealnya antara 50-60 karakter. Gunakan judul yang deskriptif dan mengandung kata kunci utama.
+- **Meta Description** — Deskripsi singkat tentang halaman yang ditampilkan di bawah judul di hasil pencarian. Idealnya antara 150-160 karakter. Tulis deskripsi yang menarik dan mengajak pengunjung untuk mengklik.
+- **Keywords** — Kata kunci yang relevan dengan konten platform, dipisahkan dengan koma. Mesin pencari modern kurang mengandalkan meta keywords, tetapi tetap berguna untuk beberapa mesin pencari lainnya.
+
+### Status Sistem
+
+Bagian Status Sistem menyediakan monitoring real-time terhadap seluruh komponen infrastruktur TeamVora. Anda bisa melihat apakah semua layanan berfungsi dengan normal atau sedang mengalami gangguan.
+
+Komponen yang dimonitor:
+
+- **Web Server (Nginx)** — Status uptime dan performa server web yang melayani permintaan HTTP/HTTPS dari pengguna. Termasuk informasi tentang jumlah koneksi aktif dan throughput.
+- **Database (PostgreSQL)** — Status koneksi database, waktu respons query, dan apakah replikasi database berfungsi dengan baik. Database yang sehat menunjukkan koneksi stabil dan waktu respons yang rendah.
+- **Redis Cache** — Hit rate cache Redis yang menunjukkan seberapa efektif cache dalam mengurangi beban database. Hit rate tinggi berarti cache bekerja dengan baik, sedangkan hit rate rendah mungkin perlu dioptimasi.
+- **Storage (R2)** — Status penyimpanan Cloudflare R2 yang digunakan untuk menyimpan aset file seperti gambar, dokumen, dan lampiran. Termasuk informasi penggunaan kapasitas dan bandwidth.
+
+### Konfigurasi .env
+
+Panel konfigurasi .env memungkinkan Anda mengedit variabel environment langsung dari antarmuka admin tanpa perlu mengakses server secara langsung.
+
+Variabel yang bisa dikonfigurasi:
+
+- **APP_NAME** — Nama aplikasi yang digunakan dalam notifikasi dan email.
+- **APP_URL** — URL utama platform yang digunakan untuk generating tautan.
+- **APP_ENV** — Mode lingkungan (development, staging, production).
+- **Database Configuration** — Koneksi database termasuk host, port, nama database, username, dan password.
+- **Mail Configuration** — Konfigurasi layanan email yang digunakan untuk pengiriman notifikasi.
+- **R2/S3 Storage Configuration** — Kredensial dan endpoint untuk layanan penyimpanan cloud.
+
+<Callout type="danger">
+Hati-hati saat mengedit variabel environment. Perubahan yang salah pada konfigurasi database atau application URL bisa membuat aplikasi tidak berfungsi sama sekali. Selalu pastikan Anda memahami dampak dari setiap perubahan sebelum menyimpan. Disarankan untuk melakukan backup konfigurasi sebelum mengubah variabel yang kritis.
+</Callout>
+
+---
+
+## Tips Super Admin
+
+Berikut adalah tips dan best practices untuk menjalankan peran Super Admin dengan efektif:
+
+- **Pantau Dashboard Secara Berkala** — Sisihkan waktu setiap hari atau beberapa kali dalam seminggu untuk memeriksa dashboard. Perhatikan tren pertumbuhan pengguna, status infrastruktur, dan aktivitas platform. Deteksi masalah sejak dini sebelum berkembang menjadi gangguan besar.
+- **Gunakan Impersonate untuk Troubleshooting** — Ketika pengguna melaporkan masalah, gunakan fitur impersonate untuk melihat masalah dari perspektif mereka. Ini jauh lebih efektif daripada menebak-nebak berdasarkan deskripsi masalah saja.
+- **Backup Database Secara Berkala** — Pastikan backup database dilakukan secara otomatis dan terjadwal. Uji proses restore secara berkala untuk memastikan backup benar-benar bisa dipulihkan saat diperlukan.
+- **Uji Konfigurasi Email Sebelum Menyimpan** — Selalu kirim email test sebelum mengaktifkan konfigurasi SMTP baru. Pastikan email berhasil diterima di kotak masuk dan bukan di folder spam.
+- **Monitor Status Infrastruktur** — Perhatikan status setiap komponen infrastruktur. Jika ada komponen yang menunjukkan status kuning atau merah, segera investigasi dan tindak lanjuti sebelum pengguna terdampak.
+- **Evaluasi Pertumbuhan Pengguna** — Gunakan grafik pertumbuhan pengguna untuk membuat keputusan strategis. Identifikasi pola pertumbuhan, musim sibuk, dan area yang perlu perhatian lebih.
+- **Dokumentasikan Setiap Perubahan** — Catat setiap perubahan pengaturan penting yang Anda lakukan, termasuk alasan dan tanggal. Dokumentasi ini sangat membantu ketika ada masalah di kemudian hari atau ketika ada pergantian admin.
