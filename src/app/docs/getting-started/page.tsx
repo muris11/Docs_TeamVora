@@ -463,6 +463,33 @@ export default function GettingStartedPage() {
         mengundang anggota yang tepat dan memberikan peran yang sesuai.
       </Callout>
 
+      <h2>Beralih Antar Tim (Team Switching)</h2>
+
+      <p>
+        Jika Anda tergabung dalam lebih dari satu tim di TeamVora, Anda bisa beralih antar tim
+        tanpa perlu logout dan login ulang. Fitur ini memungkinkan Anda mengakses data dan aktivitas
+        dari tim yang berbeda dalam satu sesi login.
+      </p>
+
+      <Steps>
+        <Step number={1} title="Buka Menu Profil">
+          Klik ikon profil Anda di pojok kanan atas header untuk membuka dropdown menu profil.
+        </Step>
+        <Step number={2} title="Pilih Tim yang Ingin Diakses">
+          Di dropdown menu, Anda akan melihat daftar tim yang Anda ikuti. Klik nama tim yang ingin
+          Anda akses. Sistem akan langsung beralih ke tim tersebut.
+        </Step>
+        <Step number={3} title="Verifikasi Perubahan">
+          Setelah beralih, dashboard dan seluruh data akan diperbarui menampilkan informasi dari
+          tim yang baru dipilih. Pastikan Anda berada di tim yang benar sebelum melakukan aktivitas.
+        </Step>
+      </Steps>
+
+      <Callout variant="info">
+        Setiap perubahan data hanya berlaku untuk tim yang sedang aktif. Transaksi kas, tugas, dan
+        log harian yang Anda buat akan tercatat di tim yang sedang Anda akses.
+      </Callout>
+
       <h2>Interface Overview</h2>
 
       <p>

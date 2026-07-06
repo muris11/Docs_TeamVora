@@ -436,6 +436,59 @@ export default function FAQPage() {
 
       <hr />
 
+      <h2>Form Kontak</h2>
+
+      <h3>Bagaimana cara mengirim pesan melalui form kontak?</h3>
+      <p>
+        TeamVora menyediakan halaman kontak yang bisa diakses dari website publik. Form kontak
+        memungkinkan Anda mengirim pesan, pertanyaan, atau masukan kepada tim TeamVora.
+      </p>
+      <ol>
+        <li>Buka halaman Kontak di website TeamVora (https://teamvora.web.id/kontak)</li>
+        <li>Isi kolom <strong>Nama Depan</strong> dan <strong>Nama Belakang</strong></li>
+        <li>Isi kolom <strong>Email</strong> dengan alamat email aktif</li>
+        <li>Isi kolom <strong>Perusahaan</strong> (opsional)</li>
+        <li>Tuliskan pesan Anda di kolom <strong>Pesan</strong></li>
+        <li>Klik tombol <strong>Kirim Pesan</strong></li>
+      </ol>
+
+      <Callout variant="info" title="Tentang Form Kontak">
+        Pesan yang dikirim melalui form kontak akan diterima oleh tim admin TeamVora. Anda akan
+        mendapat respons melalui email yang didaftarkan. Gunakan form ini untuk pertanyaan umum,
+        permintaan fitur, atau laporan masalah.
+      </Callout>
+
+      <h3>Bagaimana cara mengakses halaman kontak?</h3>
+      <p>
+        Halaman kontak bisa diakses dari menu <strong>Bantuan</strong> di website publik TeamVora.
+        Anda juga bisa langsung mengunjungi URL: https://teamvora.web.id/kontak. Tidak perlu
+        login untuk mengakses halaman kontak.
+      </p>
+
+      <hr />
+
+      <h2>Blog Publik</h2>
+
+      <h3>Bagaimana cara membaca artikel blog TeamVora?</h3>
+      <p>
+        TeamVora memiliki halaman blog publik yang bisa diakses oleh siapa saja tanpa perlu login.
+        Blog berisi artikel, berita, tutorial, dan pengumuman terbaru dari tim TeamVora.
+      </p>
+      <ol>
+        <li>Buka halaman Blog di website TeamVora (https://teamvora.web.id/blog)</li>
+        <li>Daftar artikel akan ditampilkan dalam format kartu dengan judul, excerpt, dan tanggal</li>
+        <li>Klik pada artikel untuk membaca konten lengkap</li>
+        <li>Gunakan pencarian atau filter untuk menemukan artikel tertentu</li>
+      </ol>
+
+      <Callout variant="info" title="Tentang Blog Publik">
+        Hanya artikel dengan status <strong>Published</strong> yang terlihat di halaman blog publik.
+        Artikel berstatus Draft atau Scheduled tidak akan ditampilkan. Blog publik bisa diakses
+        oleh siapa saja tanpa autentikasi.
+      </Callout>
+
+      <hr />
+
       <h2>Hubungi Kami</h2>
 
       <p>Jika pertanyaan Anda tidak terjawab di sini, silakan:</p>

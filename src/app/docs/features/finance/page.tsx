@@ -130,6 +130,33 @@ export default function FinancePage() {
 
       <hr />
 
+      <h3>Riwayat Aktivitas Kas</h3>
+
+      <p>Setiap transaksi kas memiliki riwayat aktivitas yang mencatat semua perubahan yang pernah terjadi pada transaksi tersebut. Fitur ini berguna untuk audit dan pelacakan siapa yang melakukan perubahan.</p>
+
+      <Steps>
+        <Step number={1} title="Buka Detail Transaksi">
+          Klik pada transaksi yang ingin Anda lihat riwayatnya dari daftar transaksi.
+        </Step>
+        <Step number={2} title="Akses Riwayat Aktivitas">
+          Di halaman detail transaksi, cari bagian <strong>Riwayat Aktivitas</strong> atau <strong>Activity Log</strong>. Bagian ini menampilkan semua perubahan yang pernah terjadi pada transaksi.
+        </Step>
+        <Step number={3} title="Lihat Detail Perubahan">
+          Setiap entri riwayat menampilkan:
+          <ul>
+            <li><strong>Siapa</strong> — nama anggota yang melakukan perubahan</li>
+            <li><strong>Kapan</strong> — tanggal dan waktu perubahan terjadi</li>
+            <li><strong>Apa yang berubah</strong> — field apa saja yang diubah beserta nilai lama dan baru</li>
+          </ul>
+        </Step>
+      </Steps>
+
+      <Callout variant="info" title="Tentang Audit Trail">
+        Riwayat aktivitas menggunakan sistem logging otomatis (Spatie ActivityLog) yang mencatat setiap perubahan pada data kas. Anda tidak perlu mengaktifkan fitur ini secara manual — semua perubahan tercatat otomatis.
+      </Callout>
+
+      <hr />
+
       <h3>Tips Keuangan untuk Kas</h3>
 
       <Callout variant="tip" title="Tips Keuangan">

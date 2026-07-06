@@ -433,6 +433,41 @@ export default function BlogsPage() {
           </tr>
         </tbody>
       </table>
+
+      <hr />
+
+      <h2>Blog Publik</h2>
+
+      <p>Selain halaman manajemen blog, TeamVora juga menyediakan halaman blog publik yang bisa diakses oleh siapa saja tanpa perlu login. Blog publik menampilkan artikel yang sudah dipublikasikan oleh seluruh tim di platform.</p>
+
+      <h3>Mengakses Blog Publik</h3>
+      <Steps>
+        <Step number={1} title="Buka Halaman Blog Publik">
+          Kunjungi halaman blog di website TeamVora: <strong>https://teamvora.web.id/blog</strong>. Halaman ini bisa diakses oleh siapa saja tanpa autentikasi.
+        </Step>
+        <Step number={2} title="Jelajahi Daftar Artikel">
+          Semua artikel berstatus <strong>Published</strong> akan ditampilkan dalam format kartu. Setiap kartu menampilkan judul, excerpt singkat, tanggal publikasi, dan gambar unggulan (jika ada).
+        </Step>
+        <Step number={3} title="Baca Artikel Lengkap">
+          Klik pada kartu artikel untuk membuka halaman detail artikel. Di sini Anda bisa membaca konten lengkap, melihat informasi penulis, dan membagikan artikel.
+        </Step>
+        <Step number={4} title="Cari Artikel">
+          Gunakan fitur pencarian untuk menemukan artikel berdasarkan judul atau kata kunci tertentu.
+        </Step>
+      </Steps>
+
+      <Callout variant="info" title="Tentang Blog Publik">
+        Hanya artikel dengan status <strong>Published</strong> yang terlihat di halaman blog publik. Artikel berstatus Draft atau Scheduled tidak akan ditampilkan. Artikel akan otomatis muncul di blog publik setelah dipublikasikan.
+      </Callout>
+
+      <h3>Bagi Penulis Blog</h3>
+      <p>Jika Anda adalah Team Leader yang membuat artikel, pastikan untuk:</p>
+      <ul>
+        <li><strong>Gunakan judul yang menarik</strong> — judul adalah hal pertama yang dilihat pembaca</li>
+        <li><strong>Tambahkan excerpt</strong> — ringkasan singkat yang muncul di daftar artikel</li>
+        <li><strong>Unggah gambar unggulan</strong> — gambar yang menarik meningkatkan jumlah klik</li>
+        <li><strong>Review sebelum publish</strong> — pastikan konten sudah benar dan sesuai standar</li>
+      </ul>
     </>
   )
 }
