@@ -55,7 +55,7 @@ const sidebarData: SidebarItem[] = [
   { title: "FAQ", href: "/docs/faq", icon: HelpCircle },
 ];
 
-function SidebarSection({ item }: { item: SidebarItem }) {
+function SidebarSection({ item, onLinkClick }: { item: SidebarItem; onLinkClick?: () => void }) {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(() => {
     if (!item.items) return false;
@@ -76,6 +76,7 @@ function SidebarSection({ item }: { item: SidebarItem }) {
     return (
       <Link
         href={item.href}
+        onClick={onLinkClick}
         className={cn(
           "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200",
           isActive
@@ -109,6 +110,7 @@ function SidebarSection({ item }: { item: SidebarItem }) {
             <Link
               key={child.href}
               href={child.href}
+              onClick={onLinkClick}
               className={cn(
                 "block rounded-md px-3 py-1.5 text-sm transition-colors",
                 pathname === child.href || pathname.startsWith(child.href + "/")
@@ -125,38 +127,33 @@ function SidebarSection({ item }: { item: SidebarItem }) {
   );
 }
 
-function SidebarContent() {
+function SidebarContent({ onLinkClick }: { onLinkClick?: () => void }) {
   return (
     <nav className="flex flex-col gap-1 px-3">
-      <Link href="/docs" className="mb-6 flex items-center gap-2.5 px-1">
+      <Link href="/docs" className="mb-6 flex items-center gap-2.5 px-1" onClick={onLinkClick}>
         <img src="/icon.png" alt="TeamVora" className="h-8 w-8 rounded-lg" />
         <span className="text-lg font-bold tracking-tight">TeamVora Docs</span>
       </Link>
       {sidebarData.map((item) => (
-        <SidebarSection key={item.href} item={item} />
+        <SidebarSection key={item.href} item={item} onLinkClick={onLinkClick} />
       ))}
     </nav>
   );
 }
 
-export function Sidebar() {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+interface SidebarProps {
+  mobileOpen: boolean;
+  onMobileOpenChange: (open: boolean) => void;
+}
 
+export function Sidebar({ mobileOpen, onMobileOpenChange }: SidebarProps) {
   return (
     <>
-      {/* Mobile toggle */}
-      <button
-        onClick={() => setMobileOpen(true)}
-        className="fixed left-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-lg border bg-background shadow-sm lg:hidden"
-      >
-        <Menu className="h-5 w-5" />
-      </button>
-
       {/* Mobile overlay */}
       {mobileOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setMobileOpen(false)}
+          onClick={() => onMobileOpenChange(false)}
         />
       )}
 
@@ -168,19 +165,19 @@ export function Sidebar() {
         )}
       >
         <div className="flex h-14 items-center justify-between border-b px-4">
-          <Link href="/docs" className="flex items-center gap-2">
+          <Link href="/docs" className="flex items-center gap-2" onClick={() => onMobileOpenChange(false)}>
             <img src="/icon.png" alt="TeamVora" className="h-6 w-6 rounded" />
             <span className="font-bold">TeamVora Docs</span>
           </Link>
           <button
-            onClick={() => setMobileOpen(false)}
+            onClick={() => onMobileOpenChange(false)}
             className="flex h-8 w-8 items-center justify-center rounded-md hover:bg-muted"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
         <div className="overflow-y-auto py-4">
-          <SidebarContent />
+          <SidebarContent onLinkClick={() => onMobileOpenChange(false)} />
         </div>
       </aside>
 
@@ -194,10 +191,19 @@ export function Sidebar() {
   );
 }
 
-export function Navbar() {
+export function Navbar({ onMenuClick }: { onMenuClick: () => void }) {
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6">
+    <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 sm:px-6">
+      {/* Mobile hamburger */}
+      <button
+        onClick={onMenuClick}
+        className="flex h-9 w-9 items-center justify-center rounded-lg border bg-background shadow-sm lg:hidden"
+      >
+        <Menu className="h-5 w-5" />
+      </button>
+
       <div className="flex-1" />
+
       <a
         href="https://teamvora.web.id"
         target="_blank"

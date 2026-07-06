@@ -1,21 +1,21 @@
-import { Sidebar, Navbar } from "@/components/docs/sidebar";
+"use client";
 
-export const metadata = {
-  title: "Dokumentasi - TeamVora",
-  description: "Dokumentasi lengkap platform TeamVora.",
-};
+import React from "react";
+import { Sidebar, Navbar } from "@/components/docs/sidebar";
 
 export default function DocsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
   return (
     <div className="flex min-h-screen">
-      <Sidebar />
+      <Sidebar mobileOpen={mobileOpen} onMobileOpenChange={setMobileOpen} />
       <div className="flex flex-1 flex-col min-w-0">
-        <Navbar />
-        <main className="flex-1 px-6 py-8 lg:px-16 lg:py-10">
+        <Navbar onMenuClick={() => setMobileOpen(true)} />
+        <main className="flex-1 px-4 py-6 sm:px-6 lg:px-16 lg:py-10">
           <article className="mx-auto max-w-6xl">
             {children}
           </article>
