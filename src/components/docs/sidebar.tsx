@@ -185,7 +185,7 @@ export function Sidebar() {
       </aside>
 
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-screen w-64 shrink-0 overflow-y-auto border-r bg-background lg:block">
+      <aside className="sticky top-0 hidden h-screen w-72 shrink-0 overflow-y-auto border-r bg-background lg:block">
         <div className="py-6">
           <SidebarContent />
         </div>

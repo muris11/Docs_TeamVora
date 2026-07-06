@@ -15,8 +15,8 @@ export default function DocsLayout({
       <Sidebar />
       <div className="flex flex-1 flex-col min-w-0">
         <Navbar />
-        <main className="flex-1 px-6 py-8 lg:px-12 lg:py-10">
-          <article className="mx-auto max-w-4xl">
+        <main className="flex-1 px-6 py-8 lg:px-16 lg:py-10">
+          <article className="mx-auto max-w-6xl">
             {children}
           </article>
         </main>
