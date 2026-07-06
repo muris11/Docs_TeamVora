@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout"
 import { Steps, Step } from "@/components/docs/steps"
-import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
 
 export default function MediaPage() {
   return (
@@ -25,7 +25,7 @@ export default function MediaPage() {
 
       <p>Fitur Dokumen menampilkan semua file dalam format grid kartu yang rapi. Setiap kartu menampilkan informasi lengkap tentang file, termasuk nama, ukuran, tipe file, dan siapa yang mengunggahnya.</p>
 
-      <PlaceholderImage alt="Halaman Dokumen" variant="media" caption="Tampilan halaman Dokumen dengan grid kartu file" />
+      <figure className="my-8"><img src="/images/halaman-dokumen.png" alt="Halaman Dokumen" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan halaman Dokumen dengan grid kartu file</figcaption></figure>
 
       <hr />
 
@@ -170,7 +170,7 @@ export default function MediaPage() {
 
       <p>Berbeda dengan Dokumen yang fokus pada file kerja, Galeri dioptimasi khusus untuk gambar sehingga Anda bisa melihat preview sebelum mengunduh atau menggunakannya.</p>
 
-      <PlaceholderImage alt="Galeri Media" caption="Tampilan Galeri dengan grid gambar responsif dan preview" />
+      <figure className="my-8"><img src="/images/galeri-media.png" alt="Galeri Media" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan Galeri dengan grid gambar responsif dan preview</figcaption></figure>
 
       <hr />
 

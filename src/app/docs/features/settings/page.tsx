@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout"
 import { Steps, Step } from "@/components/docs/steps"
-import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
 
 export default function SettingsPage() {
   return (
@@ -56,7 +56,7 @@ export default function SettingsPage() {
         Role akun ditentukan oleh administrator dan tidak dapat diubah sendiri. Hubungi Team Leader jika ingin mengubah role Anda dari Member menjadi Team Leader, atau sebaliknya.
       </Callout>
 
-      <PlaceholderImage alt="Halaman Pengaturan Profil" caption="Halaman Profil dengan kartu informasi dan form edit" />
+      <figure className="my-8"><img src="/images/halaman-profil.png" alt="Halaman Pengaturan Profil" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Halaman Profil dengan kartu informasi dan form edit</figcaption></figure>
 
       <hr />
 
@@ -159,7 +159,7 @@ export default function SettingsPage() {
         Gunakan gambar berformat PNG atau SVG dengan latar belakang transparan untuk hasil terbaik. Ukuran yang disarankan: <strong>512x512 piksel</strong>. Pastikan logo terlihat jelas baik dalam ukuran kecil maupun besar. Hindari teks terlalu kecil pada logo karena akan sulit dibaca saat ditampilkan dalam ukuran kecil.
       </Callout>
 
-      <PlaceholderImage alt="Halaman Pengaturan Profil Tim" caption="Halaman Profil Tim dengan logo dan informasi tim" />
+      <figure className="my-8"><img src="/images/profil-tim.png" alt="Halaman Pengaturan Profil Tim" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Halaman Profil Tim dengan logo dan informasi tim</figcaption></figure>
 
       <hr />
 
@@ -361,7 +361,7 @@ export default function SettingsPage() {
         Permission diatur berdasarkan role dan tidak bisa diustomisasi per anggota. Jika Anda membutuhkan akses khusus, hubungi Team Leader atau Super Admin untuk mendiskusikan kebutuhan Anda.
       </Callout>
 
-      <PlaceholderImage alt="Tabel Anggota Tim" caption="Daftar anggota tim dengan role dan aksi yang tersedia" />
+      <figure className="my-8"><img src="/images/tabel-anggota-tim.png" alt="Tabel Anggota Tim" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Daftar anggota tim dengan role dan aksi yang tersedia</figcaption></figure>
 
       <hr />
 

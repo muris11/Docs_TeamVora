@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout"
 import { Steps, Step } from "@/components/docs/steps"
-import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
 
 export default function ProductivityPage() {
   return (
@@ -25,7 +25,7 @@ export default function ProductivityPage() {
 
       <p>Fitur Tugas sangat membantu tim dalam mengorganisasikan pekerjaan, memprioritaskan tugas mendesak, dan memantau progres secara visual. Dengan tampilan Kanban, semua anggota bisa melihat gambaran besar pekerjaan tim dalam satu halaman.</p>
 
-      <PlaceholderImage alt="Papan Kanban Tugas" variant="kanban" caption="Tampilan papan Kanban dengan kolom To Do, Proses, dan Selesai" />
+      <figure className="my-8"><img src="/images/papan-kanban.png" alt="Papan Kanban Tugas" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan papan Kanban dengan kolom To Do, Proses, dan Selesai</figcaption></figure>
 
       <hr />
 
@@ -223,7 +223,7 @@ export default function ProductivityPage() {
 
       <p>Dengan log harian, Team Leader dapat melihat ringkasan aktivitas seluruh anggota tanpa perlu bertanya satu per satu. Anggota juga memiliki catatan pribadi tentang pencapaian mereka selama bekerja.</p>
 
-      <PlaceholderImage alt="Log Harian" variant="tasks" caption="Tampilan kartu Log Harian dengan avatar penulis dan preview konten" />
+      <figure className="my-8"><img src="/images/log-harian.png" alt="Log Harian" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan kartu Log Harian dengan avatar penulis dan preview konten</figcaption></figure>
 
       <hr />
 

@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout"
 import { Steps, Step } from "@/components/docs/steps"
-import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
 
 export default function BlogsPage() {
   return (
@@ -50,7 +50,7 @@ export default function BlogsPage() {
         </tbody>
       </table>
 
-      <PlaceholderImage alt="Editor Blog" caption="Form pembuatan artikel blog dengan editor rich text" />
+      <figure className="my-8"><img src="/images/editor-blog.png" alt="Editor Blog" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Form pembuatan artikel blog dengan editor rich text</figcaption></figure>
 
       <hr />
 
@@ -383,7 +383,7 @@ export default function BlogsPage() {
         <li>Klik <strong>Simpan</strong> — artikel akan dipublikasikan otomatis sesuai jadwal</li>
       </ol>
 
-      <PlaceholderImage alt="Daftar Artikel Blog" caption="Daftar artikel dengan indikator status dan aksi" />
+      <figure className="my-8"><img src="/images/daftar-artikel-blog.png" alt="Daftar Artikel Blog" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Daftar artikel dengan indikator status dan aksi</figcaption></figure>
 
       <hr />
 

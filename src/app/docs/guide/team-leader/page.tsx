@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout";
 import { Steps, Step } from "@/components/docs/steps";
-import { PlaceholderImage } from "@/components/docs/placeholder-image";
+
 
 export default function TeamLeaderGuidePage() {
   return (
@@ -30,7 +30,7 @@ export default function TeamLeaderGuidePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Formulir pembuatan tim baru" variant="form" />
+      <img src="/images/form-buat-tim.png" alt="Formulir pembuatan tim baru" className="w-full rounded-xl border border-border/50" />
 
       <Callout variant="tip">
         Pilih nama tim yang jelas dan deskriptif agar anggota baru mudah
@@ -64,7 +64,7 @@ export default function TeamLeaderGuidePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Halaman undang anggota tim" />
+      <img src="/images/halaman-undang-anggota.png" alt="Halaman undang anggota tim" className="w-full rounded-xl border border-border/50" />
 
       <h2>Mengelola Anggota Tim</h2>
 
@@ -140,7 +140,7 @@ export default function TeamLeaderGuidePage() {
         lengkap.
       </p>
 
-      <PlaceholderImage alt="Dashboard Team Leader" />
+      <img src="/images/dashboard-team-leader.png" alt="Dashboard Team Leader" className="w-full rounded-xl border border-border/50" />
 
       <h3>Yang Anda Lihat</h3>
 

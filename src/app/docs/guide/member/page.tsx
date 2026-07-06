@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout";
 import { Steps, Step } from "@/components/docs/steps";
-import { PlaceholderImage } from "@/components/docs/placeholder-image";
+
 
 export default function MemberGuidePage() {
   return (
@@ -35,7 +35,7 @@ export default function MemberGuidePage() {
         Di bagian bawah kartu statistik, terdapat daftar tugas yang ditugaskan kepada Anda. Daftar ini menampilkan tugas-tugas yang perlu Anda kerjakan beserta informasi singkat seperti judul tugas, prioritas, dan tenggat waktu.
       </p>
 
-      <PlaceholderImage alt="Dashboard Anggota TeamVora" variant="dashboard" />
+      <img src="/images/dashboard-anggota-2.png" alt="Dashboard Anggota TeamVora" className="w-full rounded-xl border border-border/50" />
 
       <h2>Menggunakan Fitur Finance</h2>
       <p>
@@ -179,7 +179,7 @@ export default function MemberGuidePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Papan Kanban Tugas" variant="kanban" />
+      <img src="/images/papan-kanban-2.png" alt="Papan Kanban Tugas" className="w-full rounded-xl border border-border/50" />
 
       <h3>Mengerjakan Tugas</h3>
       <Steps>

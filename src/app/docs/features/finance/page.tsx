@@ -2,7 +2,7 @@
 
 import { Callout } from "@/components/docs/callout"
 import { Steps, Step } from "@/components/docs/steps"
-import { PlaceholderImage } from "@/components/docs/placeholder-image"
+
 
 export default function FinancePage() {
   return (
@@ -25,7 +25,7 @@ export default function FinancePage() {
 
       <p>Fitur Kas menyediakan ringkasan otomatis yang mencakup total pemasukan, total pengeluaran, dan saldo akhir. Dengan demikian, Anda selalu mengetahui kondisi keuangan tim secara real-time tanpa perlu menghitung manual.</p>
 
-      <PlaceholderImage alt="Halaman Kas" variant="finance" caption="Tampilan halaman Kas dengan daftar transaksi dan ringkasan saldo" />
+      <figure className="my-8"><img src="/images/halaman-kas.png" alt="Halaman Kas" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan halaman Kas dengan daftar transaksi dan ringkasan saldo</figcaption></figure>
 
       <hr />
 
@@ -179,7 +179,7 @@ export default function FinancePage() {
 
       <p>Fitur ini sangat berguna untuk pembagian biaya seperti makan bersama, biaya acara, langganan bersama, atau pengeluaran tim lainnya yang perlu dibagi secara merata atau sesuai porsi masing-masing.</p>
 
-      <PlaceholderImage alt="Tagihan Split" variant="finance" caption="Tampilan papan Tagihan dengan kolom status pembayaran" />
+      <figure className="my-8"><img src="/images/tagihan-split.png" alt="Tagihan Split" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan papan Tagihan dengan kolom status pembayaran</figcaption></figure>
 
       <hr />
 
@@ -304,7 +304,7 @@ export default function FinancePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Verifikasi Tagihan" variant="finance" caption="Tampilan verifikasi pembayaran dengan bukti lampiran" />
+      <figure className="my-8"><img src="/images/verifikasi-tagihan.png" alt="Verifikasi Tagihan" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Tampilan verifikasi pembayaran dengan bukti lampiran</figcaption></figure>
 
       <hr />
 
@@ -316,7 +316,7 @@ export default function FinancePage() {
 
       <p>Sistem akan secara otomatis membuat tagihan baru sesuai frekuensi yang Anda atur, sehingga Anda tidak perlu membuat tagihan secara manual setiap periode. Tagihan yang dihasilkan akan langsung muncul di halaman <strong>Tagihan</strong> sebagai tagihan biasa.</p>
 
-      <PlaceholderImage alt="Tagihan Berulang" variant="finance" caption="Form pembuatan Tagihan Berulang dengan opsi frekuensi dan anggota" />
+      <figure className="my-8"><img src="/images/tagihan-berulang.png" alt="Tagihan Berulang" className="w-full rounded-xl border border-border/50" /><figcaption className="mt-3 text-center text-xs text-muted-foreground">Form pembuatan Tagihan Berulang dengan opsi frekuensi dan anggota</figcaption></figure>
 
       <hr />
 
