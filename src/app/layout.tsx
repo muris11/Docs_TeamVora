@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     template: "%s | TeamVora Docs",
   },
   description: "Dokumentasi lengkap platform TeamVora — manajemen tim all-in-one.",
-  icons: {
-    icon: "/icon.png",
-  },
 };
 
 export default function RootLayout({
@@ -30,9 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning className="h-full antialiased">
-      <head>
-        <link rel="icon" href="/icon.png" sizes="any" />
-      </head>
       <body className={`${geist.variable} ${geistMono.variable} font-sans`}>
         {children}
       </body>
