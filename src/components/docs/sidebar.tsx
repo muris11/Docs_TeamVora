@@ -127,13 +127,15 @@ function SidebarSection({ item, onLinkClick }: { item: SidebarItem; onLinkClick?
   );
 }
 
-function SidebarContent({ onLinkClick }: { onLinkClick?: () => void }) {
+function SidebarContent({ onLinkClick, showLogo = true }: { onLinkClick?: () => void; showLogo?: boolean }) {
   return (
     <nav className="flex flex-col gap-1 px-3">
-      <Link href="/docs" className="mb-6 flex items-center gap-2.5 px-1" onClick={onLinkClick}>
-        <img src="/icon.png" alt="TeamVora" className="h-8 w-8 rounded-lg" />
-        <span className="text-lg font-bold tracking-tight">TeamVora Docs</span>
-      </Link>
+      {showLogo && (
+        <Link href="/docs" className="mb-6 flex items-center gap-2.5 px-1" onClick={onLinkClick}>
+          <img src="/icon.png" alt="TeamVora" className="h-8 w-8 rounded-lg" />
+          <span className="text-lg font-bold tracking-tight">TeamVora Docs</span>
+        </Link>
+      )}
       {sidebarData.map((item) => (
         <SidebarSection key={item.href} item={item} onLinkClick={onLinkClick} />
       ))}
@@ -177,7 +179,7 @@ export function Sidebar({ mobileOpen, onMobileOpenChange }: SidebarProps) {
           </button>
         </div>
         <div className="overflow-y-auto py-4">
-          <SidebarContent onLinkClick={() => onMobileOpenChange(false)} />
+          <SidebarContent onLinkClick={() => onMobileOpenChange(false)} showLogo={false} />
         </div>
       </aside>
 
