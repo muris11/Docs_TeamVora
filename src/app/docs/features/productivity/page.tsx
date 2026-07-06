@@ -25,7 +25,7 @@ export default function ProductivityPage() {
 
       <p>Fitur Tugas sangat membantu tim dalam mengorganisasikan pekerjaan, memprioritaskan tugas mendesak, dan memantau progres secara visual. Dengan tampilan Kanban, semua anggota bisa melihat gambaran besar pekerjaan tim dalam satu halaman.</p>
 
-      <PlaceholderImage alt="Papan Kanban Tugas" caption="Tampilan papan Kanban dengan kolom To Do, Proses, dan Selesai" />
+      <PlaceholderImage alt="Papan Kanban Tugas" variant="kanban" caption="Tampilan papan Kanban dengan kolom To Do, Proses, dan Selesai" />
 
       <hr />
 
@@ -223,7 +223,7 @@ export default function ProductivityPage() {
 
       <p>Dengan log harian, Team Leader dapat melihat ringkasan aktivitas seluruh anggota tanpa perlu bertanya satu per satu. Anggota juga memiliki catatan pribadi tentang pencapaian mereka selama bekerja.</p>
 
-      <PlaceholderImage alt="Log Harian" caption="Tampilan kartu Log Harian dengan avatar penulis dan preview konten" />
+      <PlaceholderImage alt="Log Harian" variant="tasks" caption="Tampilan kartu Log Harian dengan avatar penulis dan preview konten" />
 
       <hr />
 

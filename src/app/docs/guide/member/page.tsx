@@ -35,7 +35,7 @@ export default function MemberGuidePage() {
         Di bagian bawah kartu statistik, terdapat daftar tugas yang ditugaskan kepada Anda. Daftar ini menampilkan tugas-tugas yang perlu Anda kerjakan beserta informasi singkat seperti judul tugas, prioritas, dan tenggat waktu.
       </p>
 
-      <PlaceholderImage alt="Dashboard Anggota TeamVora" />
+      <PlaceholderImage alt="Dashboard Anggota TeamVora" variant="dashboard" />
 
       <h2>Menggunakan Fitur Finance</h2>
       <p>
@@ -179,7 +179,7 @@ export default function MemberGuidePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Papan Kanban Tugas" />
+      <PlaceholderImage alt="Papan Kanban Tugas" variant="kanban" />
 
       <h3>Mengerjakan Tugas</h3>
       <Steps>

@@ -25,7 +25,7 @@ export default function MediaPage() {
 
       <p>Fitur Dokumen menampilkan semua file dalam format grid kartu yang rapi. Setiap kartu menampilkan informasi lengkap tentang file, termasuk nama, ukuran, tipe file, dan siapa yang mengunggahnya.</p>
 
-      <PlaceholderImage alt="Halaman Dokumen" caption="Tampilan halaman Dokumen dengan grid kartu file" />
+      <PlaceholderImage alt="Halaman Dokumen" variant="media" caption="Tampilan halaman Dokumen dengan grid kartu file" />
 
       <hr />
 

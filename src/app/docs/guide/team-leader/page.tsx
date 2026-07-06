@@ -30,7 +30,7 @@ export default function TeamLeaderGuidePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Formulir pembuatan tim baru" />
+      <PlaceholderImage alt="Formulir pembuatan tim baru" variant="form" />
 
       <Callout variant="tip">
         Pilih nama tim yang jelas dan deskriptif agar anggota baru mudah

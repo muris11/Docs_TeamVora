@@ -25,7 +25,7 @@ export default function FinancePage() {
 
       <p>Fitur Kas menyediakan ringkasan otomatis yang mencakup total pemasukan, total pengeluaran, dan saldo akhir. Dengan demikian, Anda selalu mengetahui kondisi keuangan tim secara real-time tanpa perlu menghitung manual.</p>
 
-      <PlaceholderImage alt="Halaman Kas" caption="Tampilan halaman Kas dengan daftar transaksi dan ringkasan saldo" />
+      <PlaceholderImage alt="Halaman Kas" variant="finance" caption="Tampilan halaman Kas dengan daftar transaksi dan ringkasan saldo" />
 
       <hr />
 
@@ -179,7 +179,7 @@ export default function FinancePage() {
 
       <p>Fitur ini sangat berguna untuk pembagian biaya seperti makan bersama, biaya acara, langganan bersama, atau pengeluaran tim lainnya yang perlu dibagi secara merata atau sesuai porsi masing-masing.</p>
 
-      <PlaceholderImage alt="Tagihan Split" caption="Tampilan papan Tagihan dengan kolom status pembayaran" />
+      <PlaceholderImage alt="Tagihan Split" variant="finance" caption="Tampilan papan Tagihan dengan kolom status pembayaran" />
 
       <hr />
 
@@ -304,7 +304,7 @@ export default function FinancePage() {
         </Step>
       </Steps>
 
-      <PlaceholderImage alt="Halaman Verifikasi Tagihan" caption="Tampilan verifikasi pembayaran dengan bukti lampiran" />
+      <PlaceholderImage alt="Verifikasi Tagihan" variant="finance" caption="Tampilan verifikasi pembayaran dengan bukti lampiran" />
 
       <hr />
 
@@ -316,7 +316,7 @@ export default function FinancePage() {
 
       <p>Sistem akan secara otomatis membuat tagihan baru sesuai frekuensi yang Anda atur, sehingga Anda tidak perlu membuat tagihan secara manual setiap periode. Tagihan yang dihasilkan akan langsung muncul di halaman <strong>Tagihan</strong> sebagai tagihan biasa.</p>
 
-      <PlaceholderImage alt="Tagihan Berulang" caption="Form pembuatan Tagihan Berulang dengan opsi frekuensi dan anggota" />
+      <PlaceholderImage alt="Tagihan Berulang" variant="finance" caption="Form pembuatan Tagihan Berulang dengan opsi frekuensi dan anggota" />
 
       <hr />
 
