@@ -1,7 +1,12 @@
+"use client";
+
 import { Callout } from "@/components/docs/callout";
 import { Steps, Step } from "@/components/docs/steps";
 import { PlaceholderImage } from "@/components/docs/placeholder-image";
 
+export default function MemberGuidePage() {
+  return (
+    <>
 ## Apa itu Anggota (Member)
 
 Anggota adalah role dasar di TeamVora. Sebagai anggota, Anda bisa menggunakan fitur keuangan, produktivitas, dan media yang tersedia di tim Anda. Anda bisa mencatat transaksi kas, membuat dan mengerjakan tugas, mengelola log harian, serta mengunggah dan mengakses dokumen tim.
@@ -12,7 +17,7 @@ Selain aspek keuangan, anggota juga berperan aktif dalam mengelola produktivitas
 
 Fitur media juga tersedia untuk anggota guna menyimpan dan berbagi dokumen penting. Semua file yang diunggah bisa diakses oleh seluruh anggota tim, sehingga kolaborasi menjadi lebih mudah tanpa perlu bergantung pada layanan cloud pihak ketiga. Dengan semua fitur ini, anggota memiliki segala yang dibutuhkan untuk berkontribusi secara efektif dalam tim.
 
-<Callout type="info" title="Tentang Role Anggota">
+<Callout variant="info" title="Tentang Role Anggota">
   Setiap pengguna yang bergabung dengan tim di TeamVora secara otomatis mendapatkan role anggota. Role ini bisa ditingkatkan menjadi Team Leader oleh pemilik tim jika diperlukan.
 </Callout>
 
@@ -26,7 +31,7 @@ Di bagian bawah kartu statistik, terdapat daftar tugas yang ditugaskan kepada An
 
 Notifikasi juga ditampilkan di dashboard untuk memberi tahu Anda tentang tugas baru yang ditugaskan, tagihan yang perlu dibayar, atau pesan dari anggota tim lainnya. Semua notifikasi bisa Anda akses dengan mengklik ikon lonceng di pojok kanan atas dashboard. Dengan tampilan yang terorganisir ini, Anda tidak akan ketinggalan informasi penting dari tim.
 
-<PlaceholderImage title="Dashboard Anggota" alt="Dashboard Anggota TeamVora" />
+<PlaceholderImage alt="Dashboard Anggota TeamVora" />
 
 ## Menggunakan Fitur Finance
 
@@ -64,7 +69,7 @@ Fitur keuangan membantu Anda melacak dan mengelola aspek finansial tim secara te
   </Step>
 </Steps>
 
-<Callout type="info" title="Tentang Lampiran">
+<Callout variant="info" title="Tentang Lampiran">
   Lampiran bukti pembayaran sangat berguna untuk memverifikasi transaksi. Jika terjadi perbedaan data atau sengketa keuangan, bukti lampiran bisa menjadi referensi utama untuk menyelesaikan masalah. Unggah bukti sejelas mungkin agar tidak ada keraguan di kemudian hari.
 </Callout>
 
@@ -78,7 +83,7 @@ Klik pada entri transaksi apa pun untuk melihat detail lengkapnya, termasuk lamp
 
 ### Mengedit dan Menghapus Transaksi
 
-<Callout type="warning" title="Perhatian">
+<Callout variant="warning" title="Perhatian">
   Anda hanya bisa mengedit atau menghapus transaksi yang Anda buat sendiri. Transaksi yang dibuat oleh anggota lain tidak bisa diubah atau dihapus oleh Anda untuk menjaga integritas data keuangan tim.
 </Callout>
 
@@ -118,7 +123,7 @@ Tagihan split memungkinkan Anda membagi biaya tertentu kepada beberapa anggota t
   </Step>
 </Steps>
 
-<Callout type="tip" title="Tips Membagi Tagihan">
+<Callout variant="tip" title="Tips Membagi Tagihan">
   Bagilah tagihan secara adil berdasarkan kontribusi atau pemanfaatan masing-masing anggota. Jika ada anggota yang tidak ikut serta dalam pengeluaran, jangan memasukkan mereka ke dalam tagihan. Komunikasi yang jelas tentang siapa yang harus membayar berapa sangat penting untuk menghindari kesalahpahaman.
 </Callout>
 
@@ -128,7 +133,7 @@ Ketika Anda menerima tagihan dari anggota lain, Anda perlu menandai bahwa Anda s
 
 <Steps>
   <Step number={1} title="Buka tagihan yang ditugaskan kepada Anda">
-    Buka halaman **Finance > Tagihan** dan cari tagihan yang memiliki status "Belum Dibayar" untuk Anda.
+    Buka halaman <strong>Finance &gt; Tagihan</strong> dan cari tagihan yang memiliki status &quot;Belum Dibayar&quot; untuk Anda.
   </Step>
   <Step number={2} title="Klik tombol 'Bayar'">
     Klik tombol **Bayar** pada tagihan tersebut untuk membuka formulir konfirmasi pembayaran.
@@ -144,7 +149,7 @@ Ketika Anda menerima tagihan dari anggota lain, Anda perlu menandai bahwa Anda s
   </Step>
 </Steps>
 
-<Callout type="info" title="Tentang Verifikasi">
+<Callout variant="info" title="Tentang Verifikasi">
   Proses verifikasi penting untuk menjaga akurasi data keuangan. Jika pembuat tagihan belum memverifikasi pembayaran Anda dalam waktu yang lama, Anda bisa mengirimkan pesan pengingat melalui fitur chat tim.
 </Callout>
 
@@ -174,7 +179,7 @@ Fitur produktivitas membantu Anda mengelola tugas dan proyek secara efektif. Seb
   </Step>
 </Steps>
 
-<PlaceholderImage title="Papan Kanban Tugas" alt="Halaman produktivitas dengan tampilan Kanban" />
+<PlaceholderImage alt="Halaman produktivitas dengan tampilan Kanban" />
 
 ### Mengerjakan Tugas
 
@@ -193,7 +198,7 @@ Fitur produktivitas membantu Anda mengelola tugas dan proyek secara efektif. Seb
   </Step>
 </Steps>
 
-<Callout type="tip" title="Tips Mengerjakan Tugas">
+<Callout variant="tip" title="Tips Mengerjakan Tugas">
   Selalu periksa prioritas dan tenggat waktu tugas sebelum mulai mengerjakan. Kerjakan tugas dengan prioritas lebih tinggi terlebih dahulu. Jika ada kendala dalam pengerjaan, komunikasikan kepada Team Leader atau anggota tim terkait agar bisa dicari solusi bersama.
 </Callout>
 
@@ -228,7 +233,7 @@ Log harian adalah catatan aktivitas kerja harian yang membantu Team Leader meman
   </Step>
 </Steps>
 
-<Callout type="info" title="Tentang Visibilitas Log Harian">
+<Callout variant="info" title="Tentang Visibilitas Log Harian">
   Semua log harian yang Anda buat bisa dilihat oleh Team Leader dan seluruh anggota tim. Ini memastikan transparansi dalam pekerjaan dan membantu tim tetap sinkron. Pastikan log yang Anda buat informatif dan profesional.
 </Callout>
 
@@ -262,7 +267,7 @@ Fitur media memungkinkan Anda menyimpan dan berbagi dokumen serta gambar dengan 
   </Step>
 </Steps>
 
-<Callout type="info" title="Tentang Penyimpanan Dokumen">
+<Callout variant="info" title="Tentang Penyimpanan Dokumen">
   Semua dokumen yang diunggah otomatis tersimpan di cloud dan terenkripsi untuk keamanan. Anda bisa mengakses dokumen dari komputer, tablet, atau ponsel Anda kapan saja selama terhubung dengan internet.
 </Callout>
 
@@ -285,7 +290,7 @@ Fitur media memungkinkan Anda menyimpan dan berbagi dokumen serta gambar dengan 
 
 ### Format yang Didukung
 
-<Callout type="info" title="Dukungan Format File">
+<Callout variant="info" title="Dukungan Format File">
   TeamVora mendukung berbagai format file untuk dokumen dan gambar. Pastikan file yang Anda unggah sesuai dengan format yang didukung agar proses unggahan berjalan lancar.
 </Callout>
 
@@ -319,13 +324,13 @@ Mengelola profil memungkinkan Anda memperbarui informasi pribadi yang ditampilka
   </Step>
 </Steps>
 
-<Callout type="warning" title="Keamanan Akun">
+<Callout variant="warning" title="Keamanan Akun">
   Jangan pernah membagikan password Anda kepada siapa pun. Gunakan password yang kuat dan berbeda dari akun lain. Jika mencurigai akun Anda telah disalahgunakan, segera ubah password dan hubungi Team Leader.
 </Callout>
 
 ## Tips untuk Anggota
 
-<Callout type="tip" title="Tips Sukses Menjadi Anggota yang Efektif">
+<Callout variant="tip" title="Tips Sukses Menjadi Anggota yang Efektif">
   Berikut adalah tips dan best practices yang bisa membantu Anda menjadi anggota yang aktif dan berkontribusi maksimal dalam tim.
 </Callout>
 
@@ -338,3 +343,6 @@ Berikut adalah tips penting untuk Anda sebagai anggota TeamVora:
 - **Periksa notifikasi secara berkala** untuk tugas baru, tagihan yang perlu dibayar, dan pesan dari anggota tim lainnya. Responsif terhadap notifikasi membantu menjaga kelancaran komunikasi dan koordinasi dalam tim.
 - **Komunikasikan kendala** kepada Team Leader atau anggota tim jika mengalami kesulitan dalam mengerjakan tugas. Tim yang baik selalu terbuka untuk diskusi dan kolaborasi dalam menyelesaikan masalah.
 - **Jaga konsistensi** dalam mencatat transaksi, mengerjakan tugas, dan membuat log harian. Konsistensi membangun kepercayaan dan memastikan data tim selalu akurat dan terkini.
+    </>
+  );
+}

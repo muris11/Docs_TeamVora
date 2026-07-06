@@ -1,0 +1,17 @@
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/app/docs/guide/member/page.tsx:136:28
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+  134 | <Steps>
+  135 |   <Step number={1} title="Buka tagihan yang ditugaskan kepada Anda">
+> 136 |     Buka halaman **Finance > Tagihan** dan cari tagihan yang memiliki status "Belum Dibay...
+      |                            ^
+  137 |   </Step>
+  138 |   <Step number={2} title="Klik tombol 'Bayar'">
+  139 |     Klik tombol **Bayar** pada tagihan tersebut untuk membuka formulir konfirmasi pembaya...
+
+Parsing ecmascript source code failed
+
+
+    at <unknown> (./src/app/docs/guide/member/page.tsx:136:28)

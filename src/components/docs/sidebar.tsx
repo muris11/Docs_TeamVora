@@ -48,7 +48,6 @@ const sidebarData: SidebarItem[] = [
     items: [
       { title: "Team Leader", href: "/docs/guide/team-leader" },
       { title: "Anggota", href: "/docs/guide/member" },
-      { title: "Super Admin", href: "/docs/guide/super-admin" },
     ],
   },
   {
